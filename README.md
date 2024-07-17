@@ -6,6 +6,8 @@ Political accountability database
 
 ```
 manage.py: Django's management cli
+PAD/
+  settings.py: Configuration for the whole project
 common/
   models: Common models used across the website (Politician organization)
   admin: Admin registrations for the models
