@@ -4,10 +4,12 @@ Political accountability database
 
 ## Files
 
+```
 manage.py: Django's management cli
 common/
   models: Common models used across the website (Politician organization)
   admin: Admin registrations for the models
+```
 
 ## How to run
 
