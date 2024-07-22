@@ -18,7 +18,7 @@ class Profile(Common):
     name = models.CharField(max_length=100)
     origin = models.CharField(max_length=100)
     website = models.URLField(blank=True)
-    img_url = models.URLField(blank=True)
+    image = models.ImageField(blank=True, upload_to='profile_pics/%Y/%m/%d')
     description = models.CharField(max_length=500)
 
     def __str__(self):
@@ -29,6 +29,7 @@ class Profile(Common):
 
 
 class Politician(Profile):
+    party = models.CharField(max_length=100)
     pass
 
 
