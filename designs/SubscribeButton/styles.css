@@ -20,7 +20,7 @@ body {
     font-size: 18px;
     border-radius: 2px;
     cursor: pointer;
-    transition: background-color 0.2s ease-out;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .subscribe-button:hover {
