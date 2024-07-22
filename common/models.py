@@ -16,10 +16,13 @@ class Common(models.Model):
 class Profile(Common):
     """ Common fields for all profiles. """
     name = models.CharField(max_length=100)
-    origin = models.CharField(max_length=100)
+    origin = models.CharField(blank=True, max_length=100)
     website = models.URLField(blank=True)
+    email = models.EmailField(blank=True)
+    phone = models.CharField(blank=True, max_length=100)
+    fax = models.CharField(blank=True, max_length=100)
     image = models.ImageField(blank=True, upload_to='profile_pics/%Y/%m/%d')
-    description = models.CharField(max_length=500)
+    description = models.CharField(blank=True, max_length=500)
 
     def __str__(self):
         return self.name
@@ -29,8 +32,10 @@ class Profile(Common):
 
 
 class Politician(Profile):
-    party = models.CharField(max_length=100)
-    pass
+    district = models.CharField(max_length=100, blank=True)
+    county = models.CharField(max_length=100, blank=True)
+    office = models.CharField(max_length=100, blank=True)
+    title_held = models.CharField(max_length=100, blank=True)
 
 
 class Organization(Profile):
@@ -44,5 +49,9 @@ class Organization(Profile):
         CITY_COUNCIL = 'CITY_COUNCIL', 'City Council'
 
     org_type = models.CharField(max_length=100, choices=OrgType.choices)
-    members = models.ManyToManyField(Politician, related_name='organizations')
+    members = models.ManyToManyField(
+        Politician,
+        related_name='organizations',
+        blank=True
+    )
     agenda = models.URLField(blank=True)
