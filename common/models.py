@@ -18,6 +18,7 @@ class Profile(Common):
     name = models.CharField(max_length=100)
     origin = models.CharField(max_length=100)
     website = models.URLField(blank=True)
+    img_url = models.URLField(blank=True)
     description = models.CharField(max_length=500)
 
     def __str__(self):
