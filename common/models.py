@@ -73,8 +73,8 @@ class Politician(Profile):
         politician_data = json_data.get('politician', None)
         if not politician_data:
             raise ValueError('Invalid json file')
-        if (type(politician_data) is not list
-                and type(politician_data) is not dict):
+        if ((type(politician_data) is not list)
+                and (type(politician_data) is not dict)):
             raise ValueError('Invalid json file')
         if type(politician_data) is dict:
             politician_data = [politician_data]
@@ -110,3 +110,36 @@ class Organization(Profile):
         null=True
     )
     agenda = models.URLField(blank=True, null=True)
+
+    @staticmethod
+    def from_json(file_path: str, **kwargs):
+        """ Converts a json field with field organization
+            and object or array of objects.
+            NOTE: An image for a given organization is
+                not saved unless save=True
+
+            kwargs:
+                save: bool
+                    if True, saves the Organization objects in the database
+        """
+        with open(file_path, 'r') as f:
+            json_data = json.load(f)
+        organization_data = json_data.get('organization', None)
+        if not organization_data:
+            raise ValueError('Invalid json file')
+        if ((type(organization_data) is not list)
+                and (type(organization_data) is not dict)):
+            raise ValueError('Invalid json file')
+        if type(organization_data) is dict:
+            organization_data = [organization_data]
+
+        org = []
+        for o in organization_data:
+            img_url = o.pop('img', None)
+            converted = Organization(**o)
+            if img_url and kwargs.get('save', False) is True:
+                converted.add_image(img_url)
+            org.append(converted)
+        if kwargs.get('save', False) is True:
+            Organization.objects.bulk_create(org)
+        return org
