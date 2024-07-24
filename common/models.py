@@ -1,5 +1,7 @@
 from django.db import models
+from django.core.files.base import ContentFile
 import json
+import requests
 
 
 # Create your models here.
@@ -52,16 +54,28 @@ class Politician(Profile):
         politician_data = json_data.get('politician', None)
         if not politician_data:
             raise ValueError('Invalid json file')
-        if type(politician_data) is dict:
-            poli = Politician(**politician_data)
-            poli = [poli]
-        elif type(politician_data) is list:
-            poli = [Politician(**data) for data in politician_data]
-        else:
+        if (type(politician_data) is not list
+                and type(politician_data) is not dict):
             raise ValueError('Invalid json file')
+        if type(politician_data) is dict:
+            politician_data = [politician_data]
+
+        poli = []
+        for p in politician_data:
+            img_url = p.pop('img', None)
+            print(img_url)
+            converted = Politician(**p)
+            if img_url:
+                response = requests.get(img_url)
+                filename = img_url.split('/')[-1]
+                print(response.status_code)
+                converted.image.save(
+                    filename,
+                    ContentFile(response.content)
+                )
+            poli.append(converted)
         if kwargs.get('save', False) is True:
-            for p in poli:
-                p.save()
+            Politician.objects.bulk_create(poli)
         return poli
 
 
