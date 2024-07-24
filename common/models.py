@@ -47,7 +47,12 @@ class Politician(Profile):
 
     def from_json(file_path: str, **kwargs):
         """ Converts a json field with field politician
-            and object or array of objects
+            and object or array of objects.
+            NOTE: An image for a given politician is not saved unless save=True
+
+            kwargs:
+                save: bool
+                    if True, saves the Politician objects in the database
         """
         with open(file_path, 'r') as f:
             json_data = json.load(f)
@@ -63,9 +68,9 @@ class Politician(Profile):
         poli = []
         for p in politician_data:
             img_url = p.pop('img', None)
-            print(img_url)
             converted = Politician(**p)
-            if img_url:
+            if img_url and kwargs.get('save', False) is True:
+                print(img_url)
                 response = requests.get(img_url)
                 filename = img_url.split('/')[-1]
                 print(response.status_code)
