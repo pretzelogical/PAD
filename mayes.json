@@ -1,0 +1,95 @@
+{
+  "politician": [
+    {
+      "name": "Alva Martin",
+      "title_held": "Commissioner District 1",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.785.2449",
+      "district": 1
+    },
+    {
+      "name": "Darrell Yoder",
+      "title_held": "Commissioner District 2",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.476.0777",
+      "district": 2
+    },
+    {
+      "name": "Randy Pierce",
+      "title_held": "Commissioner District 3",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.434.5743",
+      "district": 3
+    },
+    {
+      "name": "Mike Reed",
+      "title_held": "County Sheriff",
+      "office": "One Court Place, Suite 150 , Pryor, OK 74361",
+      "phone": "918.825.3535",
+      "district": null
+    },
+    {
+      "name": "Yolanda Thompson",
+      "title_held": "County Assessor",
+      "office": "One Court Place, Suite 110, Pryor, OK 74361",
+      "phone": "918.825.0625",
+      "district": null
+    },
+    {
+      "name": "Brittany True-Howard",
+      "title_held": "County Clerk",
+      "office": "One Court Place, Suite 120, Pryor, OK 74361",
+      "phone": "918.825.2426",
+      "district": null
+    },
+    {
+      "name": "Bobbie Martin",
+      "title_held": "County Treasurer",
+      "office": "One Court Place, Suite 100, Pryor, OK 74361",
+      "phone": "918.825.0160",
+      "district": null
+    },
+    {
+      "name": "Sarah Wallace",
+      "title_held": "Court Clerk",
+      "office": "One Court Place, Suite 200, Pryor, OK 74361",
+      "phone": "918.825.2185",
+      "district": null
+    },
+    {
+      "name": "Judge Shawn Taylor",
+      "title_held": "District Judge",
+      "office": "One Court Place, Suite 240, Pryor, OK 74361",
+      "phone": "918.825.0960",
+      "district": null
+    },
+    {
+      "name": "Judge Rebecca Gore",
+      "title_held": "Associate District Judge",
+      "office": "One Court Place, Suite 210, Pryor, Oklahoma 74361",
+      "phone": "918.825.6386",
+      "district": null
+    },
+    {
+      "name": "Judge Jacqueline Stout",
+      "title_held": "Special Judge",
+      "office": "One Court Place, Suite 230, Pryor, Oklahoma 74361",
+      "phone": "918.825.3404",
+      "district": null
+    },
+    {
+      "name": "Matt Ballard",
+      "title_held": "District Attorney",
+      "office": "One Court Place, 2nd Floor #250, Pryor , Oklahoma 74361",
+      "phone": "918.825.2171",
+      "district": null
+    }
+  ],
+  "organization": {
+    "name": "Mayes County",
+    "org_type": "County Council",
+    "origin": "Pryor Creek, OK",
+    "website": "https://mayes.okcounties.org",
+    "agenda": "https://mayes.okcounties.org/meetings"
+  }
+}
