@@ -1,7 +1,7 @@
 from django.db import models
-from django.core.files.base import ContentFile
 import json
 import requests
+from django.core.files.base import ContentFile
 
 
 # Create your models here.
@@ -32,6 +32,19 @@ class Profile(Common):
     )
     description = models.CharField(blank=True, max_length=500, null=True)
 
+    def add_image(self, img_url):
+        """
+        Adds an image to a profile.
+        """
+        print(img_url)
+        response = requests.get(img_url)
+        filename = img_url.split('/')[-1]
+        print(response.status_code)
+        self.image.save(
+            filename,
+            ContentFile(response.content)
+        )
+
     def __str__(self):
         return self.name
 
@@ -45,6 +58,7 @@ class Politician(Profile):
     office = models.CharField(max_length=100, blank=True, null=True)
     title_held = models.CharField(max_length=100, blank=True, null=True)
 
+    @staticmethod
     def from_json(file_path: str, **kwargs):
         """ Converts a json field with field politician
             and object or array of objects.
@@ -70,14 +84,7 @@ class Politician(Profile):
             img_url = p.pop('img', None)
             converted = Politician(**p)
             if img_url and kwargs.get('save', False) is True:
-                print(img_url)
-                response = requests.get(img_url)
-                filename = img_url.split('/')[-1]
-                print(response.status_code)
-                converted.image.save(
-                    filename,
-                    ContentFile(response.content)
-                )
+                converted.add_image(img_url)
             poli.append(converted)
         if kwargs.get('save', False) is True:
             Politician.objects.bulk_create(poli)
