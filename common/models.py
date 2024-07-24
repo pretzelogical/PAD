@@ -59,7 +59,7 @@ class Politician(Profile):
     title_held = models.CharField(max_length=100, blank=True, null=True)
 
     @staticmethod
-    def from_json(file_path: str, **kwargs):
+    def from_json(json_data: dict, **kwargs):
         """ Converts a json field with field politician
             and object or array of objects.
             NOTE: An image for a given politician is not saved unless save=True
@@ -68,8 +68,6 @@ class Politician(Profile):
                 save: bool
                     if True, saves the Politician objects in the database
         """
-        with open(file_path, 'r') as f:
-            json_data = json.load(f)
         politician_data = json_data.get('politician', None)
         if not politician_data:
             raise ValueError('Invalid json file')
@@ -87,7 +85,7 @@ class Politician(Profile):
                 converted.add_image(img_url)
             poli.append(converted)
         if kwargs.get('save', False) is True:
-            Politician.objects.bulk_create(poli)
+            Politician.objects.bulk_create(poli, ignore_conflicts=True)
         return poli
 
 
@@ -112,18 +110,19 @@ class Organization(Profile):
     agenda = models.URLField(blank=True, null=True)
 
     @staticmethod
-    def from_json(file_path: str, **kwargs):
+    def from_json(json_data: dict, **kwargs):
         """ Converts a json field with field organization
             and object or array of objects.
-            NOTE: An image for a given organization is
+            NOTE: Images and members for a given organization are
                 not saved unless save=True
 
             kwargs:
                 save: bool
                     if True, saves the Organization objects in the database
+                members: list
+                    list of Politician objects to add
+                    to the organizations members
         """
-        with open(file_path, 'r') as f:
-            json_data = json.load(f)
         organization_data = json_data.get('organization', None)
         if not organization_data:
             raise ValueError('Invalid json file')
@@ -137,9 +136,12 @@ class Organization(Profile):
         for o in organization_data:
             img_url = o.pop('img', None)
             converted = Organization(**o)
-            if img_url and kwargs.get('save', False) is True:
-                converted.add_image(img_url)
+            if kwargs.get('save', False) is True:
+                converted.save()
+                if kwargs.get('members', None):
+                    converted.members.add(*kwargs.get('members'))
+                if img_url:
+                    converted.add_image(img_url)
+                converted.save()
             org.append(converted)
-        if kwargs.get('save', False) is True:
-            Organization.objects.bulk_create(org)
         return org
