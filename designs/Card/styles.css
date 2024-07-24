@@ -35,7 +35,9 @@ body {
 }
 
 .categories p {
-    margin: 8px 0;
+    text-align: left;
+    border-bottom: #ccc solid 2px;
+    padding-bottom: 12px;
 }
 
 .categories span {
