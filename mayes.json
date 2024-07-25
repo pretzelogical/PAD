@@ -1,0 +1,107 @@
+{
+  "politician": [
+    {
+      "name": "Alva Martin",
+      "title_held": "Commissioner District 1",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.785.2449",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/alva_martin2_816.jpg",
+      "district": 1
+    },
+    {
+      "name": "Darrell Yoder",
+      "title_held": "Commissioner District 2",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.476.0777",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/darrell_785.jpg",
+      "district": 2
+    },
+    {
+      "name": "Randy Pierce",
+      "title_held": "Commissioner District 3",
+      "office": "One Court Place, Suite 140, Pryor, OK 74361",
+      "phone": "918.434.5743",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/randy_pierce2_818.jpg",
+      "district": 3
+    },
+    {
+      "name": "Mike Reed",
+      "title_held": "County Sheriff",
+      "office": "One Court Place, Suite 150 , Pryor, OK 74361",
+      "phone": "918.825.3535",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/sherpic1.jpg",
+      "district": null
+    },
+    {
+      "name": "Yolanda Thompson",
+      "title_held": "County Assessor",
+      "office": "One Court Place, Suite 110, Pryor, OK 74361",
+      "phone": "918.825.0625",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/046a0685_795.jpg",
+      "district": null
+    },
+    {
+      "name": "Brittany True-Howard",
+      "title_held": "County Clerk",
+      "office": "One Court Place, Suite 120, Pryor, OK 74361",
+      "phone": "918.825.2426",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/clerkpic1.jpg",
+      "district": null
+    },
+    {
+      "name": "Bobbie Martin",
+      "title_held": "County Treasurer",
+      "office": "One Court Place, Suite 100, Pryor, OK 74361",
+      "phone": "918.825.0160",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/bobbie_800.jpg",
+      "district": null
+    },
+    {
+      "name": "Sarah Wallace",
+      "title_held": "Court Clerk",
+      "office": "One Court Place, Suite 200, Pryor, OK 74361",
+      "phone": "918.825.2185",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/sarah_784.jpg",
+      "district": null
+    },
+    {
+      "name": "Judge Shawn Taylor",
+      "title_held": "District Judge",
+      "office": "One Court Place, Suite 240, Pryor, OK 74361",
+      "phone": "918.825.0960",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/staylor_760.jpg",
+      "district": null
+    },
+    {
+      "name": "Judge Rebecca Gore",
+      "title_held": "Associate District Judge",
+      "office": "One Court Place, Suite 210, Pryor, Oklahoma 74361",
+      "phone": "918.825.6386",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/rebeccagore_761.jpg",
+      "district": null
+    },
+    {
+      "name": "Judge Jacqueline Stout",
+      "title_held": "Special Judge",
+      "office": "One Court Place, Suite 230, Pryor, Oklahoma 74361",
+      "phone": "918.825.3404",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/judge_jackie_stout_819.jpg",
+      "district": null
+    },
+    {
+      "name": "Matt Ballard",
+      "title_held": "District Attorney",
+      "office": "One Court Place, 2nd Floor #250, Pryor , Oklahoma 74361",
+      "phone": "918.825.2171",
+      "img": "https://mayes.okcounties.org/cache/media/thumb/matt_645.png",
+      "district": null
+    }
+  ],
+  "organization": {
+    "name": "Mayes County",
+    "org_type": "County Council",
+    "origin": "Pryor Creek, OK",
+    "website": "https://mayes.okcounties.org",
+    "agenda": "https://mayes.okcounties.org/meetings"
+  }
+}
