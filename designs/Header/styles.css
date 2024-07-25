@@ -1,0 +1,46 @@
+
+body {
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 20px;
+    transition: 0.5s;
+    user-select: none; 
+}
+
+.logo:hover {
+    height: 70px;
+    transition: 0.5s;
+    user-select: none; 
+}
+
+.site-title {
+    transition: 0.5s;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 0;
+    user-select: none; 
+}
+
+.site-title:hover {
+    transition: 0.5s;
+    letter-spacing: 7px;
+    user-select: none; 
+}
