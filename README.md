@@ -26,7 +26,7 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 
 # Run server
-python3 manage.py runserver
+npm run dev
 
 # Login to admin in your browser at localhost:8000/admin
 

@@ -1,5 +1,4 @@
 from django.db import models
-import json
 import requests
 from django.core.files.base import ContentFile
 
@@ -7,7 +6,7 @@ from django.core.files.base import ContentFile
 # Create your models here.
 
 
-class Common(models.Model):
+class Base(models.Model):
     """Common fields for all models."""
     id = models.BigAutoField(primary_key=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -17,7 +16,7 @@ class Common(models.Model):
         abstract = True
 
 
-class Profile(Common):
+class Profile(Base):
     """ Common fields for all profiles. """
     name = models.CharField(max_length=100)
     origin = models.CharField(blank=True, max_length=100, null=True)
@@ -105,7 +104,6 @@ class Organization(Profile):
         Politician,
         related_name='organizations',
         blank=True,
-        null=True
     )
     agenda = models.URLField(blank=True, null=True)
 
@@ -145,3 +143,23 @@ class Organization(Profile):
                 converted.save()
             org.append(converted)
         return org
+
+
+class Article(Base):
+    title = models.CharField(max_length=100)
+    url = models.URLField()
+    preview = models.TextField()
+    author = models.TextField()
+    image = models.ImageField(
+        blank=True,
+        upload_to='article_pics/%Y/%m/%d',
+        null=True
+    )
+    related = models.ManyToManyField(
+        Politician,
+        related_name='articles',
+        blank=True,
+    )
+
+    def __str__(self):
+        return self.title

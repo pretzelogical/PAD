@@ -446,6 +446,10 @@ video {
   display: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -554,6 +558,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.sidebar {
+  transition: width 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
 .sidebar-hidden {
   width: 2rem;
 }
@@ -562,13 +570,19 @@ video {
   width: 9rem;
 }
 
-.sidebarItems-hidden {
-  display: none;
+.sidebarItems {
+  transition: opacity 0.5s cubic-bezier(1,0,0,1),
+                visibility 0.5s cubic-bezier(1,0,0,1);
   opacity: 0;
+}
+
+.sidebarItems-hidden {
+  visibility: hidden;
 }
 
 .sidebarItems-visible {
   display: block;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -605,6 +619,10 @@ video {
   margin-right: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -617,16 +635,28 @@ video {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
+.grid {
+  display: grid;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-screen {
   height: 100vh;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -641,14 +671,36 @@ video {
   justify-content: center;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-zinc-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 91 / var(--tw-border-opacity));
+}
+
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600 {
+.bg-zinc-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }
 
 .px-1 {
@@ -661,9 +713,9 @@ video {
   padding-right: 2.5rem;
 }
 
-.px-40 {
-  padding-left: 10rem;
-  padding-right: 10rem;
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .py-2 {
@@ -707,16 +759,4 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
