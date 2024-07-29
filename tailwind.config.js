@@ -10,4 +10,12 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    'sidebar-visible',
+    'sidebar-hidden',
+    'sidebar',
+    'sidebarItems-visible',
+    'sidebarItems-hidden',
+    'sidebarItems',
+  ]
 }

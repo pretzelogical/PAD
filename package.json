@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx tailwindcss -i ./input.css -o ./static/common/styles.css -o ./common/static/common/styles.css",
+    "build:django:static": "python manage.py collectstatic --noinput",
     "dev:css": "npx tailwindcss -i ./input.css -o ./static/common/styles.css -o ./common/static/common/styles.css --watch",
-    "dev:django": "npx nodemon --exec python manage.py runserver",
-    "dev": "npx concurrently --kill-others \"npm run dev:css\" \"npm run dev:django\""
+    "dev:django:server": "npx nodemon --exec python manage.py runserver",
+    "dev": "npm run build:django:static && npx concurrently --kill-others \"npm run dev:css\" \"npm run dev:django:server\""
   },
   "keywords": [],
   "author": "",
