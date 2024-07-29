@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Article
 
 
 def test(request):
-    return render(request, 'common/test.html.jinja2')
+    articles = Article.objects.all()[:5]
+    return render(request, 'common/test.html.jinja2', {'articles': articles})

@@ -1,0 +1,19 @@
+{% load static %}
+<ul class="grid grid-cols-3 gap-x-2">
+  {% for article in articles %}
+  <li class="mb-4 border-4 border-zinc-600">
+    <a href="{{ article.url }}">
+      <div>
+        {% if article.image %}
+        <img width="500" height="500" src="{{ article.image.url }}" alt="Article Image">
+        {% else %}
+        <img width="500" height="500" src="{% static 'common/elements/logo-gray.svg' %}" alt="Article Image">
+        {% endif %}
+        <p>{{ article.title }}</p>
+        <p>{{ article.preview }}</p>
+        <p>{{ article.author }}</p>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
