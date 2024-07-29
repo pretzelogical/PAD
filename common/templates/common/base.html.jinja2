@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'common/styles.css' %}">
+  <title>Base</title>
+</head>
+<body>
+  <header class="bg-gray-500 p-3">
+    <div class="flex items-center">
+      <img src="{% static 'common/elements/logo.png' %}" alt="Logo">
+      <h1 class="text-white text-4xl ml-2">
+        Political Accountability Database</h1>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2024.</p>
+  </footer>
+</body>
+</html>

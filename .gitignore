@@ -168,3 +168,7 @@ npm-debug.log
 .env
 .DS_Store
 media/
+
+
+# Django generated static files
+./static

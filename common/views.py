@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
-def index(request):
-    return render(request, 'base.html')
+
+def test(request):
+    return render(request, 'common/test.html.jinja2')
