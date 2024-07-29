@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static 'common/styles.css' %}">
+  <!-- Scripts -->
+  <script src="{% static 'common/scripts/sidebar.js' %}" defer></script>
+
+  <title>Base</title>
+</head>
+
+<body class="bg-gray-200 text-gray-800 h-screen">
+
+  <header class="bg-zinc-600 py-3 px-10 z-10 relative">
+    <div class="flex items-center">
+      <img width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
+      <h1 class="text-white text-4xl ml-2">
+        Political Accountability Database</h1>
+    </div>
+  </header>
+
+  <main class="px-20 py-2 h-full">
+    <nav
+      class="fixed top-0 left-0 bg-zinc-600 text-white h-screen
+        pt-4 z-20 px-1 overflow-hidden sidebar sidebar-hidden"
+      id="sidebar"
+    >
+      <div class="flex flex-col justify-center">
+        <button id="toggleSidebar" class="cursor-pointer mx-auto">
+          <img class="w-8 h-8" width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
+        </button>
+        <div id="sidebarItems" class="sidebarItems sidebarItems-hidden text-center">
+          <p class="bold text-2xl">P.A.D.</p>
+          <ul class="text-lg">
+            <li><a href="#" class="pointer">Page 1</a></li>
+            <li><a href="#" class="pointer">Page 2</a></li>
+            <li><a href="#" class="pointer">Page 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="flex items-center justify-center">
+    <p>&copy; 2024.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .sidebar {
+    transition: width 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  .sidebar-hidden {
+    @apply w-8;
+  }
+  .sidebar-visible {
+    @apply w-36;
+  }
+
+  .sidebarItems {
+    transition: opacity 0.5s cubic-bezier(1,0,0,1),
+                visibility 0.5s cubic-bezier(1,0,0,1);
+    opacity: 0;
+  }
+  .sidebarItems-hidden {
+    visibility: hidden;
+  }
+  .sidebarItems-visible {
+    @apply block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+}
