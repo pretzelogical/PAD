@@ -41,12 +41,12 @@ html {
     min-height: 100%;
     position: relative;
     top: 0;
-    border-radius: 30px;
+    border-radius: 5px;
     transition: all 0.1s ease-in;
   }
   .card:hover {
     transition: 0.5s;
-    top: -10px;
+    top: -16px;
     box-shadow: 0 4px 5px rgba(1, 0, 0, 0.2);
   }
   .card article {
