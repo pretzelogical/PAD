@@ -60,6 +60,6 @@ Run `python3 manage.py shell`
 
 ```python3
 
->> from common.utils import politicaian_organization_from_json
->> po = politicaian_organization_from_json('file.json')
+>> from common.utils import politician_organization_from_json
+>> po = politician_organization_from_json('file.json')
 ```
