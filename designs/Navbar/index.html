@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <button class="toggle-btn" onclick="toggleNav()">☰</button>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="big-card">
+                <img src="image.png" alt="Big Card Image">
+                <div class="big-card-content">
+                    <h2>
+                        Local Man Advocates for Higher Salaries for Lawyers, Cites “Severe Underpayment” in Legal Profession</h2>
+                    <p>July 25, 2024 — In a surprising turn of events, Johnathan Smith, a 42-year-old resident of Maplewood, has emerged as an outspoken advocate for increasing salaries for lawyers, arguing that the legal profession is severely underpaid and underappreciated.
+
+                        Smith, who works as a middle school history teacher, recently held a community meeting in the local library, where he passionately presented his case. According to Smith, the current compensation for lawyers is “woefully inadequate” considering the years of education and the critical role they play in society.
+                        
+                        “Lawyers are the backbone of justice and democracy,” Smith declared to a crowd of puzzled onlookers. “They ensure that the laws are upheld and that everyone, regardless of their status, has a fair shot at justice. It’s high time we recognize their contributions by significantly increasing their pay.”</p>
+                </div>
+            </div>
+            <div class="small-cards">
+                <div class="small-card">
+                    <h3>Local Politician Sues Disney World Over “Emotional Distress” Claim</h3>
+                    <p>July 25, 2024 — In a surprising legal twist, Senator Mark Thompson has filed a lawsuit against Disney World, alleging "emotional distress" following a recent visit. Thompson claims that an unexpected malfunction on the popular ride, Space Mountain, left him traumatized.
+
+                        According to the lawsuit, Thompson was stuck on the ride for over an hour, leading to what he describes as "severe anxiety and lasting psychological impact." He is seeking $5 million in damages.
+                        
+                        Disney World representatives expressed disappointment over the incident but stated that all safety protocols were followed and no injuries were reported. The case is set to be heard later this year, drawing widespread media attention.</p>
+                </div>
+                <div class="small-card">
+                    <h3>
+                        Local Judge Moves to Outlaw Dog Ownership, Sparks Outrage</h3>
+                    <p>July 25, 2024 — In a move that has ignited widespread outrage, Judge Emily Carter has proposed a controversial new ordinance to outlaw dog ownership within the city limits of Greenville. Citing an increase in dog-related incidents, including noise complaints and public safety concerns, Judge Carter believes the measure is necessary for maintaining community harmony.
+
+                        “Our priority is to ensure a safe and peaceful environment for all residents,” Carter stated at a city council meeting. “Unfortunately, the rise in dog-related issues has made this drastic step unavoidable.”</p>
+                </div>
+                <div class="small-card">
+                    <h3>Mayor Accuses Trump of Being a Terminator from the Future</h3>
+                    <p>July 25, 2024 — In a bizarre and unexpected twist, Mayor Linda Reynolds of Fairview has publicly accused former President Donald Trump of being a terminator sent from the future. During a heated city council meeting, Mayor Reynolds claimed that Trump’s rise to power and subsequent actions were part of a grand scheme orchestrated by futuristic machines.
+
+                        “He’s not just a man; he’s a machine sent back in time to manipulate and control our world,” Reynolds declared, pointing to what she described as “evidence” of Trump’s unusual resilience and influence.
+                        
+                        The statement has sparked a flurry of reactions, ranging from amusement to disbelief. Critics and political opponents have dismissed the accusation as a desperate attempt to grab headlines. Trump’s spokesperson responded with a brief statement: “This is absolutely ridiculous and not worth a response.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("expanded");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- Navbar -->
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="#" class="text-white text-lg font-bold">Brand</a>
+    <div class="hidden md:flex space-x-4 items-center">
+      <div class="relative group">
+        <a href="#" class="text-gray-300 hover:text-white">Home</a>
+        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home Item 1</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home Item 2</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home Item 3</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="#" class="text-gray-300 hover:text-white">About</a>
+        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Item 1</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Item 2</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Item 3</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="#" class="text-gray-300 hover:text-white">Services</a>
+        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Service Item 1</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Service Item 2</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Service Item 3</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact Item 1</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact Item 2</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact Item 3</a>
+        </div>
+      </div>
+      <!-- Dropdown Menu -->
+      <div class="relative group">
+        <button id="dropdown-btn" class="text-gray-300 hover:text-white focus:outline-none">More</button>
+        <div id="dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Profile</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Settings</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="menu" class="md:hidden flex flex-col space-y-4 mt-4 hidden">
+    <a href="#" class="text-gray-300 hover:text-white">Home</a>
+    <a href="#" class="text-gray-300 hover:text-white">About</a>
+    <a href="#" class="text-gray-300 hover:text-white">Services</a>
+    <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+    <a href="#" class="text-gray-300 hover:text-white">Profile</a>
+    <a href="#" class="text-gray-300 hover:text-white">Settings</a>
+    <a href="#" class="text-gray-300 hover:text-white">Logout</a>
+  </div>
+</nav>
