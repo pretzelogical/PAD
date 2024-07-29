@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx tailwindcss -i ./input.css -o ./static/common/styles.css -o ./common/static/common/styles.css",
     "build:django:static": "python manage.py collectstatic --noinput",
+    "build:django:migrate:make": "python manage.py makemigrations",
+    "build:django:migrate:apply": "python manage.py migrate",
+    "build:django:migrate": "npm run build:django:migrate:make && npm run build:django:migrate:apply",
     "dev:css": "npx tailwindcss -i ./input.css -o ./static/common/styles.css -o ./common/static/common/styles.css --watch",
     "dev:django:server": "npx nodemon --exec python manage.py runserver",
     "dev": "npm run build:django:static && npx concurrently --kill-others \"npm run dev:css\" \"npm run dev:django:server\""
