@@ -1,0 +1,10 @@
+{
+    "politician": [],
+    "organization": {
+        "name": "Tulsa County",
+        "org_type": "County Council",
+        "origin": "Tulsa, OK",
+        "website": "https://example.com",
+        "agenda": "https://example.com/meetings"
+    }
+}
