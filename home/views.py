@@ -8,7 +8,7 @@ def home(request):
     articles = Article.objects.all()[:5]
     context = {
         'article_list': {
-            'bigArticle': articles[0],
+            'mainArticle': articles[0],
             'articles': articles[1:],
         }
     }
