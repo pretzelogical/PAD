@@ -1,45 +1,71 @@
-body {
+html {
+    background: #f5f7f8;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px 0;
+  }
+  
+  header {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  
+  .band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  
+  .card {
+    width: 400px;
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+  }
+  .card:hover {
+    transition: 0.5s;
+    top: -16px;
+    box-shadow: 0 4px 5px rgba(1, 0, 0, 0.2);
+  }
+  .card article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card h1 {
+    font-size: 20px;
     margin: 0;
-    background-color: #f0f0f0;
-}
-
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #fff;
-    width: 350px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-pic {
-    outline: rgb(207, 207, 207) solid 1px;
-    box-shadow: 30px;
-    width: 300px;
-    height: 100%;
-    border-radius: 50%;
-    margin-bottom: 16px;
-}
-
-.name {
-    font-size: 1.5em;
-    margin: 0;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: #ccc solid 2px;
-}
-
-.categories p {
-    text-align: left;
-    border-bottom: #ccc solid 2px;
-    padding-bottom: 12px;
-}
-
-.categories span {
+    color: #333;
+  }
+  .card p {
+    flex: 1;
+    line-height: 1.4;
+  }
+  .card span {
+    font-size: 12px;
     font-weight: bold;
-}
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+  }
+  .card .thumb {
+    padding-bottom: 60%;
+    background-size:cover;
+    background-position: center center;
+  }
