@@ -1,18 +1,35 @@
 {% load static %}
-<ul class="grid grid-cols-3 gap-x-2">
-  {% for article in articles %}
-  <li class="mb-4 border-4 border-zinc-600">
-    <a href="{{ article.url }}">
+<ul class="grid grid-cols-3 gap-x-2 gap-y-4">
+  <!-- <li class="mb-4 border-4 col-span-2 shadow-xl">
+    <a href="{{ article_list.bigArticle.url }}">
       <div>
-        {% if article.image %}
-        <img width="500" height="500" src="{{ article.image.url }}" alt="Article Image">
+        {% if article_list.bigArticle.image %}
+        <img width="500" height="500" class="w-full" src="{{ article_list.bigArticle.image.url }}" alt="Article Image">
         {% else %}
-        <img width="500" height="500" src="{% static 'common/elements/logo-gray.svg' %}" alt="Article Image">
+        <img width="500" height="500" class="w-full" src="{% static 'common/elements/logo-gray.svg' %}" alt="Article Image">
         {% endif %}
-        <p>{{ article.title }}</p>
-        <p>{{ article.preview }}</p>
-        <p>{{ article.author }}</p>
+        <p class="w-fit">{{ article_list.bigArticle.title }}</p>
+        <p>{{ article_list.bigArticle.preview }}</p>
+        <p>{{ article_list.bigArticle.author }}</p>
       </div>
+    </a>
+  </li> -->
+
+  {% for article in article_list.articles %}
+  <li>
+    <a href="{{ article.url }}" class="h-full border-4 shadow-xl flex flex-col rounded-md">
+      {% if article.image %}
+      <img width="500" height="500" class="w-full" src="{{ article.image.url }}" alt="Article Image">
+      {% else %}
+      <img width="500" height="500" class="w-full" src="{% static 'common/elements/logo-gray.svg' %}" alt="Article Image">
+      {% endif %}
+      <div class="py-4 px-2 flex flex-col align-top ">
+        <div>
+          <p class="font-bold text-2xl">{{ article.title }}</p>
+          <p class="py-2">{{ article.preview }}</p>
+        </div>
+      </div>
+      <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article.author }}</p>
     </a>
   </li>
   {% endfor %}
