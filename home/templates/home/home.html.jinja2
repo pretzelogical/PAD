@@ -1,0 +1,12 @@
+{% extends 'common/base.html.jinja2' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+  <h2 class="text-3xl font-bold">Home</h2>
+  <div>
+    {% include 'common/components/article_list.html.jinja2' %}
+  </div>
+{% endblock %}
