@@ -22,7 +22,7 @@
   <header class="bg-zinc-600 py-3 px-10 z-10 relative">
     <div class="flex items-center">
       <img width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
-      <h1 class="text-white text-4xl ml-2">
+      <h1 class="text-white text-4xl ml-2 font-bold">
         Political Accountability Database</h1>
     </div>
   </header>
@@ -38,11 +38,15 @@
           <img class="w-8 h-8" width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
         </button>
         <div id="sidebarItems" class="sidebarItems sidebarItems-hidden text-center">
-          <p class="bold text-2xl">P.A.D.</p>
-          <ul class="text-lg">
-            <li><a href="#" class="pointer">Page 1</a></li>
-            <li><a href="#" class="pointer">Page 2</a></li>
-            <li><a href="#" class="pointer">Page 3</a></li>
+          <p class="font-bold text-4xl">P.A.D.</p>
+          <ul class="text-lg border-2 border-solid border-gray-200 rounded-sm">
+            <li class="border-b border-gray-200">
+              <a href="/" class="pointer text-2xl">Home</a>
+            </li>
+            <li class="border-b border-gray-200">
+              <a href="#" class="pointer text-2xl">Page 2</a>
+            </li>
+            <li><a href="#" class="pointer text-2xl">Page 3</a></li>
           </ul>
         </div>
       </div>

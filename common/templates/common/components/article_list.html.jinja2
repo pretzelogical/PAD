@@ -11,8 +11,8 @@
       {% endif %}
       <div class="py-4 px-2 flex flex-col align-top ">
         <div>
-          <p class="font-bold text-2xl">{{ article_list.mainArticle.title }}</p>
-          <p class="py-2">{{ article_list.mainArticle.preview }}</p>
+          <p class="font-bold text-2xl overflow-scroll">{{ article_list.mainArticle.title }}</p>
+          <p class="py-2 overflow-scroll">{{ article_list.mainArticle.preview }}</p>
         </div>
       </div>
       <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article_list.mainArticle.author }}</p>
@@ -30,8 +30,8 @@
       {% endif %}
       <div class="py-4 px-2 flex flex-col align-top ">
         <div>
-          <p class="font-bold text-2xl">{{ article.title }}</p>
-          <p class="py-2">{{ article.preview }}</p>
+          <p class="font-bold text-2xl overflow-scroll">{{ article.title }}</p>
+          <p class="py-2 overflow-scroll">{{ article.preview }}</p>
         </div>
       </div>
       <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article.author }}</p>
