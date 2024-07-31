@@ -1,0 +1,37 @@
+{% load static %}
+<ul class="grid gap-x-5 gap-y-6" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
+  {% for poli in search_results.politician %}
+  <li
+    class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md"
+    style="transition: all 0.1s ease-in;"
+  >
+    <a href="#" class="flex">
+      {% if poli.image %}
+      <div class="w-1/5 h-full overflow-hidden">
+        <img
+          src="{{ poli.image.url }}"
+          alt="Profile picture for {{ poli.name }}"
+          class="object-cover w-full h-full rounded-l-md"
+          style="width: 106px; height: 106px;"
+        >
+      </div>
+      {% else %}
+      <img
+        src="{% static 'common/elements/logo-gray.svg' %}"
+        alt="Profile picture for {{ poli.name }}"
+        class="object-cover w-full h-full rounded-l-md"
+        style="width: 106px; height: 106px;"
+      >
+      {% endif %}
+      <div class="flex">
+        <div>
+          <p class="font-bold text-xl">{{ poli.name }}</p>
+          {% if poli.description %}
+          <p class="py-2">{{ poli.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

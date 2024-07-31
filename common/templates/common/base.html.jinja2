@@ -12,6 +12,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{% static 'common/styles.css' %}">
   <!-- Scripts -->
+  <script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
   <script src="{% static 'common/scripts/sidebar.js' %}" defer></script>
 
   {% block title %}{% endblock %}
@@ -44,7 +45,7 @@
               <a href="/" class="pointer text-2xl">Home</a>
             </li>
             <li class="border-b border-gray-200">
-              <a href="#" class="pointer text-2xl">Page 2</a>
+              <a href="/search" class="pointer text-2xl">Search</a>
             </li>
             <li><a href="#" class="pointer text-2xl">Page 3</a></li>
           </ul>
@@ -54,7 +55,7 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="flex items-center justify-center">
+  <footer class="flex items-center justify-center fixed bottom-0 left-0 right-0">
     <p>&copy; 2024.</p>
   </footer>
 </body>

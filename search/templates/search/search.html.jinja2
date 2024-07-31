@@ -1,0 +1,49 @@
+{% extends "common/base.html.jinja2" %}
+
+
+{% block title %}
+<title>PAD - Search</title>
+{% endblock %}
+
+
+{% block content %}
+<div>
+  <h2>Search</h2>
+  <div>
+    <div class="flex justify-center">
+      <form
+        method="get"
+        hx-get="/search"
+        hx-target="#searchResults"
+        hx-swap="innerHTMl"
+        class="flex w-3/4 lg:w-11/12"
+      >
+        <input
+          type="text"
+          name="q"
+          class="outline-none border-0 margin-0 shadow-inner text-2xl
+            rounded-l-full px-10 w-full"
+        >
+        <button
+          type="submit"
+          class="bg-zinc-600 py-2 pr-3 pl-1 text-center flex items-center justify-center
+            hover:bg-zinc-500 rounded-r-full"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="flex justify-center py-20">
+      <p>Search results</p>
+    </div>
+    <div id="searchResults">
+      <!-- {% include 'search/components/search_results.html.jinja2' %} -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
