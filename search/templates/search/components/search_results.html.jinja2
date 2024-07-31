@@ -7,7 +7,7 @@
   >
     <a href="#" class="flex">
       {% if poli.image %}
-      <div class="w-1/5 h-full overflow-hidden">
+      <div class="h-full overflow-hidden">
         <img
           src="{{ poli.image.url }}"
           alt="Profile picture for {{ poli.name }}"
@@ -23,13 +23,18 @@
         style="width: 106px; height: 106px;"
       >
       {% endif %}
-      <div class="flex">
-        <div>
-          <p class="font-bold text-xl">{{ poli.name }}</p>
-          {% if poli.description %}
-          <p class="py-2">{{ poli.description }}</p>
-          {% endif %}
-        </div>
+      <div class="pl-4">
+
+        <p class="font-bold text-xl py-2">{{ poli.name }}</p>
+
+        {% if poli.description %}
+        <p class="py-2">{{ poli.description }}</p>
+        {% endif %}
+
+        {% if poli.organizations.all %}
+        <p>{{ poli.organizations.all|join:", " }}</p>
+        {% endif %}
+
       </div>
     </a>
   </li>

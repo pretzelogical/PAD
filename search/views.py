@@ -9,9 +9,11 @@ def search(request):
         print(request.GET.get('q', ''))
         query = request.GET.get('q', '')
         poli = Politician.objects.filter(name__icontains=query)
+        print(poli[0].name, poli[0].organizations.all())
+
         context = {
             'search_results': {
-                'politician': poli
+                'politician': poli,
             }
         }
         return render(

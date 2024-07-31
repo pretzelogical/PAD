@@ -20,7 +20,7 @@
 
 <body class="bg-gray-200 text-gray-800 h-screen">
 
-  <header class="bg-zinc-600 py-3 px-10 z-10 relative">
+  <header class="bg-zinc-700 py-3 px-10 z-10 relative">
     <div class="flex items-center">
       <img width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
       <h1 class="text-white text-4xl ml-2 font-bold">
@@ -30,7 +30,7 @@
 
   <main class="px-20 py-2">
     <nav
-      class="fixed top-0 left-0 bg-zinc-600 text-white h-screen
+      class="fixed top-0 left-0 bg-zinc-700 text-white h-screen
         pt-4 z-20 px-1 overflow-hidden sidebar sidebar-hidden"
       id="sidebar"
     >
@@ -55,9 +55,9 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="flex items-center justify-center fixed bottom-0 left-0 right-0">
+  <!-- <footer class="flex items-center justify-center fixed bottom-0 left-0 right-0">
     <p>&copy; 2024.</p>
-  </footer>
+  </footer> -->
 </body>
 
 </html>
