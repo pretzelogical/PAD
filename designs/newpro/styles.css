@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+main {
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary {
+    width: 65%;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary section {
+    margin-bottom: 1.5rem;
+}
+
+.summary h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+.profile-card {
+    width: 30%;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.profile-details h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.profile-details p {
+    margin: 0.5rem 0;
+}
+
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  
+  .card {
+    width: 400px;
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+  }
+  .card:hover {
+    transition: 0.5s;
+    top: -16px;
+    box-shadow: 0 4px 5px rgba(1, 0, 0, 0.2);
+  }
+  .card article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+  }
+  .card p {
+    flex: 1;
+    line-height: 1.4;
+  }
+  .card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+  }
+  .card .thumb {
+    padding-bottom: 60%;
+    background-size:cover;
+    background-position: center center;
+  }
+
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+}
