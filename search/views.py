@@ -6,8 +6,8 @@ from django.http import HttpResponseBadRequest
 
 
 def search(request):
+    """ Search for either a politician or an organization """
     if request.htmx:
-        print(request.GET.get('q', ''))
         query = request.GET.get('q', '')
         category = request.GET.get('category', 'politician')
 
