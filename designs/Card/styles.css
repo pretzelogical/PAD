@@ -4,8 +4,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding-top: 50px;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.summary {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 900px;
+}
+
+.summary h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.summary p {
+  margin: 10px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.summary h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.summary ul {
+  list-style-type: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.summary li {
+  margin: 5px 0;
+  color: #666;
+  font-size: 16px;
 }
 
 .profile-card {
@@ -20,9 +65,10 @@ body {
 
 .profile-card img {
   width: 100%;
-height: 100%;
-  max-height: 300px;
-    object-fit:contain;
+  min-width: 200px;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -38,8 +84,6 @@ height: 100%;
 }
 
 .profile-card p {
-  border-top: 1px solid black;
-  padding-top: 10px;
   margin: 10px 0;
   color: #666;
   font-size: 16px;
@@ -61,5 +105,22 @@ height: 100%;
 }
 
 #toggleButton.collapsed {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;max-width: 400px;
+  }
+
+  .profile-card {
+    order: 0;
+    width: 400px;
+  }
+
+  .summary {
+    order: 1;
+  }
 }
