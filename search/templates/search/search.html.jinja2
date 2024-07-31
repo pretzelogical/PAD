@@ -7,8 +7,8 @@
 
 
 {% block content %}
-<div>
-  <h2>Search</h2>
+<div class="lg:px-44 px-0">
+  <h2 class="text-3xl font-bold pt-4 pb-8">Search</h2>
   <div>
     <div class="flex justify-center">
       <form
@@ -16,8 +16,9 @@
         hx-get="/search"
         hx-target="#searchResults"
         hx-swap="innerHTMl"
-        class="flex w-3/4 lg:w-11/12"
+        class="flex flex-col w-3/4 lg:w-11/12"
       >
+      <div class="flex mb-4">
         <input
           type="text"
           name="q"
@@ -34,13 +35,24 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
+      </div>
+      <div class="px-10">
+        <select
+          name="category"
+          id="categorySelect"
+          name="category"
+          class="bg-zinc-700 text-white rounded-sm p-4"
+        >
+          <option value="politician">Politician</option>
+          <option value="organization">Organization</option>
+        </select>
+      </div>
       </form>
     </div>
-    <div class="flex justify-center py-20">
+    <div class="flex justify-center py-10">
       <p>Search results</p>
     </div>
     <div id="searchResults">
-      <!-- {% include 'search/components/search_results.html.jinja2' %} -->
     </div>
   </div>
 </div>
