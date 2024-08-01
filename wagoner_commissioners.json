@@ -1,0 +1,38 @@
+{
+    "politician": [
+        {
+            "name": "James Hanning",
+            "title_held": "District 1 Commissioner",
+            "phone": "918-357-1927",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2912",
+            "address": "N/A",
+            "district": "District 1"
+        },
+        {
+            "name": "Chris Edwards",
+            "title_held": "District 2 Commissioner",
+            "phone": "918-485-4549",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2652",
+            "address": "N/A",
+            "district": "District 2"
+        },
+        {
+            "name": "Tim Kelley",
+            "title_held": "District 3 Commissioner",
+            "phone": "918-486-2132",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2658",
+            "address": "N/A",
+            "district": "District 3"
+        }
+    ],
+    "organization": {
+        "name": "Wagoner County",
+        "org_type": "County Council",
+        "origin": "Wagoner, OK",
+        "website": "https://www.wagonercounty.ok.gov",
+        "agenda": "https://www.wagonercounty.ok.gov/agendacenter"
+    }
+}
