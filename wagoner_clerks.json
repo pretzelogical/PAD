@@ -1,0 +1,29 @@
+{
+    "politician": [
+        {
+            "name": "Lori Hendricks",
+            "title_held": "County Clerk",
+            "phone": "918-485-2216",
+            "email": "clerk@wagonercounty.ok.gov",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=3051",
+            "address": "P.O. Box 156 Wagoner OK 74467",
+            "district": "N/A"
+        },
+        {
+            "name": "Jim Hight",
+            "title_held": "Court Clerk",
+            "phone": "918-485-4508",
+            "email": "james.hight@oscn.net",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2915",
+            "address": "P.O. Box 249 Wagoner OK 74467",
+            "district": "N/A"
+        }
+    ],
+    "organization": {
+        "name": "Wagoner County",
+        "org_type": "County Council",
+        "origin": "Wagoner, OK",
+        "website": "https://www.wagonercounty.ok.gov",
+        "agenda": "https://www.wagonercounty.ok.gov/agendacenter"
+    }
+}
