@@ -635,16 +635,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -796,7 +786,6 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }
-
 
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
@@ -979,7 +968,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-=======
   .lg\:w-11\/12 {
     width: 91.666667%;
   }
