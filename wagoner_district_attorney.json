@@ -1,0 +1,20 @@
+{
+    "politician": [
+        {
+            "name": "Jack Thorp",
+            "title_held": "District Attorney",
+            "phone": "918-485-2119",
+            "email": "general.info@da27.org",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2942",
+            "office": "N/A",
+            "district": "N/A"
+        }
+    ],
+    "organization": {
+        "name": "Wagoner County",
+        "org_type": "County Council",
+        "origin": "Wagoner, OK",
+        "website": "https://www.wagonercounty.ok.gov",
+        "agenda": "https://www.wagonercounty.ok.gov/agendacenter"
+    }
+}

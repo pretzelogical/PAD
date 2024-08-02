@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -631,6 +631,7 @@ body {
   margin-right: auto;
 }
 
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -825,6 +826,7 @@ body {
   border-width: 4px;
 }
 
+
 .border-0 {
   border-width: 0px;
 }
@@ -865,7 +867,6 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }
-
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
@@ -900,7 +901,6 @@ body {
 .p-5 {
   padding: 1.25rem;
 }
-
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
