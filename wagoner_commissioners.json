@@ -6,7 +6,7 @@
             "phone": "918-357-1927",
             "email": "N/A",
             "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2912",
-            "address": "N/A",
+            "office": "N/A",
             "district": "District 1"
         },
         {
@@ -15,7 +15,7 @@
             "phone": "918-485-4549",
             "email": "N/A",
             "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2652",
-            "address": "N/A",
+            "office": "N/A",
             "district": "District 2"
         },
         {
@@ -24,7 +24,7 @@
             "phone": "918-486-2132",
             "email": "N/A",
             "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2658",
-            "address": "N/A",
+            "office": "N/A",
             "district": "District 3"
         }
     ],
