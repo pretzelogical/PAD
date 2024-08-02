@@ -1,0 +1,81 @@
+{% load static %}
+<ul class="grid gap-x-5 gap-y-6" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+  {% for poli in search_results.politician %}
+  <li
+    class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md"
+    style="transition: all 0.1s ease-in;"
+  >
+    <a href="#" class="flex">
+      {% if poli.image %}
+      <div class="h-full overflow-hidden">
+        <img
+          src="{{ poli.image.url }}"
+          alt="Profile picture for {{ poli.name }}"
+          class="object-cover w-full h-full rounded-l-md"
+          style="width: 106px; height: 106px;"
+        >
+      </div>
+      {% else %}
+      <img
+        src="{% static 'common/elements/logo-gray.svg' %}"
+        alt="Profile picture for {{ poli.name }}"
+        class="object-cover w-full h-full rounded-l-md"
+        style="width: 106px; height: 106px;"
+      >
+      {% endif %}
+      <div class="pl-4">
+
+        <p class="font-bold text-xl py-2">{{ poli.name }}</p>
+
+        {% if poli.description %}
+        <p class="py-2">{{ poli.description }}</p>
+        {% endif %}
+
+        {% if poli.organizations.all %}
+        <p>{{ poli.organizations.all|join:", " }}</p>
+        {% endif %}
+
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+
+  {% for org in search_results.organization %}
+  <li
+    class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md"
+    style="transition: all 0.1s ease-in;"
+  >
+    <a href="#" class="flex">
+      {% if org.image %}
+      <div class="h-full overflow-hidden">
+        <img
+          src="{{ org.image.url }}"
+          alt="Profile picture for {{ org.name }}"
+          class="object-cover w-full h-full rounded-l-md"
+          style="width: 106px; height: 106px;"
+        >
+      </div>
+      {% else %}
+      <img
+        src="{% static 'common/elements/logo-gray.svg' %}"
+        alt="Profile picture for {{ org.name }}"
+        class="object-cover w-full h-full rounded-l-md"
+        style="width: 106px; height: 106px;"
+      >
+      {% endif %}
+      <div class="pl-4">
+
+        <p class="font-bold text-xl py-2">{{ org.name }}</p>
+
+        {% if org.description %}
+        <p class="py-2">{{ org.description }}</p>
+        {% endif %}
+
+        {% if org.organizations.all %}
+        <p>{{ org.organizations.all|join:", " }}</p>
+        {% endif %}
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
