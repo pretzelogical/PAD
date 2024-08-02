@@ -1,0 +1,36 @@
+{
+  "politician": [
+    {
+      "name": "Kevin Hern",
+      "title_held": "Congressional District 1",
+      "office": "United States House of Representatives, 2448 E. 81st Street, Suite 5150, Tulsa OK 74137/1019 Longworth HOB, Washington DC 20515",
+      "phone": "918.935.3222/202.225.2211",
+      "img": "",
+      "district": 1,
+      "party": "R"
+    },
+    {
+      "name": "Markwayne Mullin",
+      "title_held": "United States Senator",
+      "office": "United States Senate, Washington, D.C. 20515/Tulsa Office: 1924 S. Utica Ave., Suite 530, Tulsa, OK 74104-6511",
+      "phone": "918.748.5111",
+      "img": "",
+      "party": "R"
+    },
+    {
+      "name": "James Lankford",
+      "title_held": "United States Senator",
+      "office": "United States Senate, Washington, D.C. 20515/Tulsa Office: 5810 East Skelly Drive, Tulsa, OK 74135",
+      "phone": "918.581.7651",
+      "img": "",
+      "party": "R"
+    }
+  ],
+  "organization": {
+    "name": "OK Congress Members",
+    "org_type": "US Congress",
+    "origin": "Oklahoma",
+    "website": "",
+    "agenda": ""
+  }
+}
