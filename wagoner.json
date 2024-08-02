@@ -1,0 +1,92 @@
+{
+    "politician": [
+        {
+            "name": "James Hanning",
+            "title_held": "District 1 Commissioner",
+            "phone": "918-357-1927",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2912",
+            "office": "N/A",
+            "district": "District 1"
+        },
+        {
+            "name": "Chris Edwards",
+            "title_held": "District 2 Commissioner",
+            "phone": "918-485-4549",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2652",
+            "office": "N/A",
+            "district": "District 2"
+        },
+        {
+            "name": "Tim Kelley",
+            "title_held": "District 3 Commissioner",
+            "phone": "918-486-2132",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2658",
+            "office": "N/A",
+            "district": "District 3"
+        },
+        {
+            "name": "Sandy Hodges",
+            "title_held": "Assessor",
+            "phone": "918-485-2367",
+            "email": "N/A",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=1222",
+            "office": "N/A",
+            "district": "N/A"
+        },
+        {
+            "name": "Lori Hendricks",
+            "title_held": "County Clerk",
+            "phone": "918-485-2216",
+            "email": "clerk@wagonercounty.ok.gov",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=3051",
+            "office": "P.O. Box 156 Wagoner OK 74467",
+            "district": "N/A"
+        },
+        {
+            "name": "Jim Hight",
+            "title_held": "Court Clerk",
+            "phone": "918-485-4508",
+            "email": "james.hight@oscn.net",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2915",
+            "office": "P.O. Box 249 Wagoner OK 74467",
+            "district": "N/A"
+        },
+        {
+            "name": "Jack Thorp",
+            "title_held": "District Attorney",
+            "phone": "918-485-2119",
+            "email": "general.info@da27.org",
+            "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2942",
+            "office": "N/A",
+            "district": "N/A"
+        },
+        {
+            "name": "Chris Elliott",
+            "title_held": "Sheriff",
+            "phone": "918-485-3124",
+            "email": "N/A",
+            "img": "https://www.wagonercountyso.org/images/chris-elliott-sheriff.jpg",
+            "office": "307 E. Cherokee St., Wagoner, OK 74467",
+            "district": "N/A"
+        },
+        {
+            "name": "Chasity Levi",
+            "title_held": "Treasurer",
+            "phone": "918-485-2149",
+            "email": "treasurer@wagonercounty.ok.gov",
+            "img": "https://static/common/politician/default.png",
+            "office": "307 E Cherokee, Wagoner, OK",
+            "district": "N/A"
+        }
+    ],
+    "organization": {
+        "name": "Wagoner County",
+        "org_type": "County Council",
+        "origin": "Wagoner, OK",
+        "website": "https://www.wagonercounty.ok.gov",
+        "agenda": "https://www.wagonercounty.ok.gov/agendacenter"
+    }
+}
