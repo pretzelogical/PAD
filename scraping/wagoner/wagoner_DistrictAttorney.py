@@ -18,7 +18,7 @@ def scrape_district_attorney(url):
         'phone': 'N/A',
         'email': 'N/A',
         'img': 'N/A',
-        'address': 'N/A',
+        'office': 'N/A',
         'district': 'N/A'
     }
 

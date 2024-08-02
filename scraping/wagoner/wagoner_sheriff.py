@@ -17,7 +17,7 @@ def scrape_sheriff(url):
         'phone': 'N/A',
         'email': 'N/A',
         'img': 'N/A',
-        'address': '307 E. Cherokee St., Wagoner, OK 74467',
+        'office': '307 E. Cherokee St., Wagoner, OK 74467',
         'district': 'N/A'
     }
 

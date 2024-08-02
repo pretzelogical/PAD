@@ -16,7 +16,7 @@ def scrape_treasurer(url):
         'phone': '918-485-2149',
         'email': 'treasurer@wagonercounty.ok.gov',
         'img': 'N/A',
-        'address': '307 E Cherokee, Wagoner, OK',
+        'office': '307 E Cherokee, Wagoner, OK',
         'district': 'N/A'
     }
 

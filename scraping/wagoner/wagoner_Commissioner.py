@@ -47,7 +47,7 @@ def scrape_profile(url):
         'phone': phone,
         'email': email,
         'img': img,
-        'address': "N/A",
+        'office': "N/A",
         'district': district
     }
 
