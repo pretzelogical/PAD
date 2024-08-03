@@ -82,6 +82,7 @@ class Politician(Profile):
             converted = Politician(**p)
             if img_url and kwargs.get('save', False) is True:
                 converted.add_image(img_url)
+            converted.save()
             poli.append(converted)
         if kwargs.get('save', False) is True:
             Politician.objects.bulk_create(poli, ignore_conflicts=True)
