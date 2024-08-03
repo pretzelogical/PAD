@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center pt-12 bg-gray-100 min-h-screen">
+    <div class="flex flex-col md:flex-row gap-5 items-start w-full max-w-5xl px-4">
+        <div class="bg-white shadow-md p-5 w-full max-w-lg">
+            <h2 class="text-2xl text-gray-800">Markwayne Mullin</h2>
+            <p class="mt-2 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac justo efficitur, tristique justo vel, commodo metus.
+            </p>
+            
+            <h3 class="mt-5 text-xl text-gray-800">Career History</h3>
+            <ul class="list-disc mt-2 pl-5 text-gray-600">
+                <li>Senator, United States Senate (2023 - Present)</li>
+                <li>Representative, U.S. House of Representatives (2013 - 2023)</li>
+                <li>CEO, Mullin Plumbing Inc. (2000 - Present)</li>
+            </ul>
+
+            <h3 class="mt-5 text-xl text-gray-800">Early Life and Education</h3>
+            <p class="mt-2 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            </p>
+
+            <h3 class="mt-5 text-xl text-gray-800">Political Positions</h3>
+            <p class="mt-2 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            </p>
+
+            <h3 class="mt-5 text-xl text-gray-800">Personal Life</h3>
+            <p class="mt-2 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            </p>
+        </div>
+        <div class="bg-white shadow-md overflow-hidden w-full max-w-sm text-center p-5 relative">
+            <img src="image.png" alt="Markwayne Mullin" class="w-full h-auto object-cover mb-5">
+            <h2 class="text-2xl text-gray-800">Markwayne Mullin</h2>
+            <div class="details hidden text-left">
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Organization:</strong> United States Senate</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Assumed Office:</strong> January 3, 2023</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Preceded by:</strong> Jim Inhofe</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Personal Details:</strong></p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Born:</strong> July 26, 1977</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Political Party:</strong> Republican</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Spouse(s):</strong> Christie</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Children:</strong> 6</p>
+                <p class="mt-2 text-gray-600 border-b pb-2"><strong class="text-gray-800">Education:</strong> Oklahoma State University Institute of Technology</p>
+            </div>
+            <button id="toggleButton" class="absolute bottom-3 right-3 text-2xl cursor-pointer text-gray-800 outline outline-gray-500 p-2">▼</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
