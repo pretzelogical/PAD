@@ -1,0 +1,140 @@
+{% extends "common/base.html.jinja2" %}
+{% load static %}
+{% block title %}
+<title>PAD - Profile - {{ profile.name }}</title>
+{% endblock %}
+
+
+{% block content %}
+<div
+  class="lg:px-44 px-0 py-4 h-fit grid gap-x-4"
+  style="grid-template-columns: auto 1fr;
+         grid-template-rows: auto 1fr auto;"
+>
+  <div>
+    <h1 class="text-3xl font-bold">{{ profile.name }}</h1>
+    {% if profile.title_held %}
+    <h3 class="text-2xl font-bold pb-8">{{ profile.title_held }}</h3>
+    {% endif %}
+    {% if profile.org_type %}
+    <h3 class="text-2xl font-bold pb-8">{{ profile.org_type }}</h3>
+    {% endif %}
+  </div>
+  <div
+    class="w-96 h-fit"
+    style="grid-row: 2 / 3; grid-column: 1 / 2;"
+  >
+    {% if profile.image %}
+    <img src="{{ profile.image.url }}" alt="Profile picture for {{ profile.name }}"
+      class="object-cover w-full h-full rounded-md">
+    {% else %}
+    <img src="{% static 'common/elements/logo-gray.svg' %}" alt="Profile picture for {{ profile.name }}"
+      class="object-cover w-full h-full rounded-md">
+    {% endif %}
+  </div>
+  <div
+    class="flex flex-col justify-start items-start p-4"
+    style="grid-row: 3 / 4; grid-column: 1 / 2;"
+  >
+
+    {% if profile.organizations.all %}
+    <h4 class="text-xl"><strong>Organizations:</strong></h4>
+    {% for org in profile.organizations.all %}
+      <a
+        href="/profile/organization/{{ org.id }}"
+        class="shadow-md hover:shadow-2xl hover:-translate-y-2 rounded-md w-full
+          flex my-2"
+        style="transition: all 0.1s ease-in;"
+      >
+      <div class="h-full">
+        {% if org.image %}
+        <img
+          src="{{ org.image.url }}"
+          alt="Profile picture for {{ org.name }}"
+          class="object-cover w-12 rounded-l-md"
+        >
+        {% else %}
+        <img
+          src="{% static 'common/elements/logo-gray.svg' %}"
+          alt="Profile picture for {{ org.name }}"
+          class="object-cover w-12 rounded-l-md"
+        >
+        {% endif %}
+      </div>
+        <p class="p-2">{{ org.name }}</p>
+      </a>
+    {% endfor %}
+    {% endif %}
+
+    {% if profile.members.all %}
+    <h4 class="text-xl"><strong>Members:</strong></h4>
+    {% for member in profile.members.all %}
+      <a
+        href="/profile/politician/{{ member.id }}"
+        class="shadow-md hover:shadow-2xl hover:-translate-y-2 rounded-md w-full
+          flex my-2"
+        style="transition: all 0.1s ease-in;"
+      >
+      <div class="h-full">
+        {% if member.image %}
+        <img
+          src="{{ member.image.url }}"
+          alt="Profile picture for {{ member.name }}"
+          class="object-cover w-12 rounded-l-md"
+        >
+        {% else %}
+        <img
+          src="{% static 'common/elements/logo-gray.svg' %}"
+          alt="Profile picture for {{ member.name }}"
+          class="object-cover w-12 rounded-l-md"
+        >
+        {% endif %}
+      </div>
+        <p class="p-2">{{ member.name }}</p>
+      </a>
+    {% endfor %}
+    {% endif %}
+  </div>
+  <div class="pl-4">
+    {% if profile.description %}
+    <p class="pb-4">{{ profile.description }}</p>
+    {% endif %}
+
+    {% if profile.office %}
+    <p class="pb-4"><strong>Office: </strong>{{ profile.office }}</p>
+    {% endif %}
+
+    {% if profile.district %}
+    <p class="pb-4"><strong>District: </strong>{{ profile.district }}</p>
+    {% endif %}
+
+    {% if profile.county %}
+    <p class="pb-4"><strong>County: </strong>{{ profile.county }}</p>
+    {% endif %}
+
+    {% if profile.website %}
+    <p class="pb-4"><strong>Website: </strong>
+      <a
+        href="{{ profile.website }}"
+        target="_blank"
+        class="text-blue-500 underline"
+      >
+      {{ profile.website }}
+      </a>
+    </p>
+    {% endif %}
+
+    {% if profile.phone %}
+    <p class="pb-4"><strong>Phone: </strong>{{ profile.phone }}</p>
+    {% endif %}
+
+    {% if profile.email %}
+    <p class="pb-4"><strong>Email: </strong>{{ profile.email }}</p>
+    {% endif %}
+
+    {% if profile.fax %}
+    <p class="pb-4"><strong>Fax: </strong>{{ profile.fax }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
