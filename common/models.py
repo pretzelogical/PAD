@@ -111,7 +111,7 @@ class Organization(Profile):
         PARTY = 'PARTY', 'Party'
         CITY_COUNCIL = 'CITY_COUNCIL', 'City Council',
         COUNTY_COUNCIL = 'COUNTY_COUNCIL', 'County Council'
-        STATE_COUNCIL = 'STATE_COUNCIL', 'State Council'
+        STATE_GOVERNMENT = 'STATE_GOVERNMENT', 'State Government'
         US_CONGRESS = 'US_CONGRESS', ' US Congress'
 
     org_type = models.CharField(max_length=100, choices=OrgType.choices)
