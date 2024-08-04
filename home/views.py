@@ -6,6 +6,8 @@ from common.models import Article
 
 def home(request):
     articles = Article.objects.all()[:5]
+    if len(articles) <= 0:
+        return render(request, 'home/home.html.jinja2')
     context = {
         'article_list': {
             'mainArticle': articles[0],
