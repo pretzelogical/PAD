@@ -37,7 +37,10 @@ def scrape_assessor(url):
         img_tag = city_directory.find('img', {'class': 'imageAlignRight'})
         profile_data['img'] = f"{base_url}{img_tag['src']}" if img_tag else 'N/A'
 
-    return profile_data
+    # Remove keys with None or "N/A" values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v not in (None, 'N/A')}
+
+    return filtered_profile_data
 
 def main():
     profile_url = "https://www.wagonercounty.ok.gov/directory.aspx?eid=78"
