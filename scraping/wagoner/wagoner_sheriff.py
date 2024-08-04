@@ -47,7 +47,10 @@ def scrape_sheriff(url):
         if phone_tag:
             profile_data['phone'] = phone_tag.text.strip().replace('Phone: ', '')
 
-    return profile_data
+    # Remove keys with None or "N/A" values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v not in (None, 'N/A')}
+
+    return filtered_profile_data
 
 def main():
     profile_url = "https://www.wagonercountyso.org/sheriff"

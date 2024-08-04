@@ -46,7 +46,10 @@ def scrape_district_attorney(url):
     if phone_tag:
         profile_data['phone'] = phone_tag.text.split(':')[1].strip()
 
-    return profile_data
+    # Remove keys with None or "N/A" values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v not in (None, 'N/A')}
+
+    return filtered_profile_data
 
 def main():
     profile_url = "https://www.wagonercounty.ok.gov/271/District-27-District-Attorney"

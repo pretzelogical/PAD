@@ -41,7 +41,7 @@ def scrape_profile(url):
         district_number = title_held.split(" ")[1]
         district = f"District {district_number}"
 
-    return {
+    profile_data = {
         'name': name,
         'title_held': title_held,
         'phone': phone,
@@ -50,6 +50,11 @@ def scrape_profile(url):
         'office': "N/A",
         'district': district
     }
+
+    # Remove keys with None or "N/A" values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v not in (None, 'N/A')}
+
+    return filtered_profile_data
 
 def main():
     profile_urls = [

@@ -12,13 +12,13 @@ def scrape_official_page(url):
     soup = BeautifulSoup(response.content, 'html.parser')
 
     profile_data = {
-        'name': 'N/A',
-        'title_held': 'N/A',
-        'phone': 'N/A',
-        'email': 'N/A',
-        'img': 'N/A',
-        'office': 'N/A',
-        'district': 'N/A'
+        'name': None,
+        'title_held': None,
+        'phone': None,
+        'email': None,
+        'img': None,
+        'office': None,
+        'district': None
     }
 
     # Extract the required information from the flip-card class
@@ -28,9 +28,11 @@ def scrape_official_page(url):
         title_tag = flip_card.find('div', {'class': 'person-title'})
         img_tag = flip_card.find('img')
 
-        profile_data['name'] = name_tag.text.strip() if name_tag else 'N/A'
-        profile_data['title_held'] = title_tag.text.strip() if title_tag else 'N/A'
-        profile_data['img'] = f"{base_url}{img_tag['src']}" if img_tag else 'N/A'
+        profile_data['name'] = name_tag.text.strip() if name_tag else None
+        profile_data['title_held'] = title_tag.text.strip() if title_tag else None
+        if img_tag:
+            img_src = img_tag['src']
+            profile_data['img'] = f"{base_url}{img_src}" if not img_src.startswith('http') else img_src
 
     # Extract the contact information from all info-box divs
     contact_card = soup.find_all('div', {'class': 'info-box'})
@@ -40,14 +42,17 @@ def scrape_official_page(url):
         if title == 'Contact':
             phone_tag = card.find('a', href=True, string=lambda x: 'tel' in x)
             email_tag = card.find('a', href=True, string=lambda x: '@' in x)
-            profile_data['phone'] = phone_tag.text.strip() if phone_tag else 'N/A'
-            profile_data['email'] = email_tag.text.strip() if email_tag else 'N/A'
+            profile_data['phone'] = phone_tag.text.strip() if phone_tag else None
+            profile_data['email'] = email_tag.text.strip() if email_tag else None
         
         if title == 'Address':
             address_tag = card.find('div', {'class': 'info-holder'}).find('p')
-            profile_data['office'] = address_tag.text.strip() if address_tag else 'N/A'
+            profile_data['office'] = address_tag.text.strip() if address_tag else None
 
-    return profile_data
+    # Remove keys with None values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v is not None}
+
+    return filtered_profile_data
 
 def main():
     urls = [
