@@ -20,12 +20,12 @@ def scrape_rogers():
         name = politician.find('h4', class_='widgetTitle field p-name').text.strip()
         position = politician.find('div', class_='field p-job-title').text.strip()
         phone_tag = politician.find('div', class_='field p-tel')
-        phone = phone_tag.find('a').text.strip() if phone_tag else "N/A"
+        phone = phone_tag.find('a').text.strip() if phone_tag else None
         img_tag = politician.find('img', class_='field u-photo')
-        img = f"{base_url}{img_tag['src']}" if img_tag else "N/A"
+        img = f"{base_url}{img_tag['src']}" if img_tag else None
         
         office_tags = politician.find_all('div', class_='field p-note')
-        office = "N/A"
+        office = None
         district = None
 
         for tag in office_tags:
@@ -40,14 +40,19 @@ def scrape_rogers():
         print(f'{name}: {position} - {office} ({phone})')
         print(img)
         
-        politician_list.append({
+        politician_data = {
             'name': name,
             'title_held': position,
             'office': office,
             'phone': phone,
             'img': img,
             'district': district
-        })
+        }
+        
+        # Remove keys with None or "N/A" values
+        filtered_politician_data = {k: v for k, v in politician_data.items() if v not in (None, "N/A")}
+
+        politician_list.append(filtered_politician_data)
 
     return politician_list
 

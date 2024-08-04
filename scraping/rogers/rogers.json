@@ -3,7 +3,6 @@
         {
             "name": "Dan DeLozier",
             "title_held": "Commissioner District 1",
-            "office": "N/A",
             "phone": "918-789-2279",
             "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=650",
             "district": "District 1"
@@ -11,7 +10,6 @@
         {
             "name": "Steve Hendrix",
             "title_held": "Commissioner District 2",
-            "office": "N/A",
             "phone": "918-443-2441",
             "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=649",
             "district": "District 2"
@@ -19,7 +17,6 @@
         {
             "name": "Ron Burrows",
             "title_held": "Commissioner District 3",
-            "office": "N/A",
             "phone": "918-341-2380",
             "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=648",
             "district": "District 3"
@@ -27,50 +24,38 @@
         {
             "name": "Scott Marsh",
             "title_held": "Rogers County Assessor",
-            "office": "N/A",
             "phone": "918-923-4795",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=674",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=674"
         },
         {
             "name": "Jeanne Heidlage",
             "title_held": "Rogers County Clerk",
-            "office": "N/A",
             "phone": "918-923-4796",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=673",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=673"
         },
         {
             "name": "Cathi Edwards",
             "title_held": "Rogers County Court Clerk",
-            "office": "N/A",
             "phone": "918-923-4961",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=684",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=684"
         },
         {
             "name": "Matt Ballard",
             "title_held": "District Attorney",
-            "office": "N/A",
             "phone": "918-923-4960",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=659",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=659"
         },
         {
             "name": "Scott Walton",
             "title_held": "Sheriff",
-            "office": "N/A",
             "phone": "918-342-9700",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=660",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=660"
         },
         {
             "name": "Jason Carini",
             "title_held": "Treasurer",
-            "office": "N/A",
             "phone": "918-923-4797",
-            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=661",
-            "district": null
+            "img": "https://www.rogerscounty.org/ImageRepository/Document?documentID=661"
         }
     ],
     "organization": {
