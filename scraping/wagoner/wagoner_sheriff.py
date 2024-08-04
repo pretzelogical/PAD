@@ -17,7 +17,7 @@ def scrape_sheriff(url):
         'phone': 'N/A',
         'email': 'N/A',
         'img': 'N/A',
-        'office': '307 E. Cherokee St., Wagoner, OK 74467',
+        'office': 'N/A',
         'district': 'N/A'
     }
 
@@ -41,7 +41,7 @@ def scrape_sheriff(url):
     address_div = soup.find('div', {'class': 'address col-md-4 float-end py-4'})
     if address_div:
         address_tag = address_div.find('address')
-        profile_data['address'] = address_tag.text.strip() if address_tag else 'N/A'
+        profile_data['office'] = address_tag.text.strip() if address_tag else 'N/A'
 
         phone_tag = address_div.find('p')
         if phone_tag:

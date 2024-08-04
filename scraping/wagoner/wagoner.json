@@ -12,7 +12,7 @@
             "phone": "918-485-2216",
             "email": "clerk@wagonercounty.ok.gov",
             "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=3051",
-            "address": "P.O. Box 156 Wagoner OK 74467"
+            "office": "P.O. Box 156 Wagoner OK 74467"
         },
         {
             "name": "Jim Hight",
@@ -20,7 +20,7 @@
             "phone": "918-485-4508",
             "email": "james.hight@oscn.net",
             "img": "https://www.wagonercounty.ok.gov/ImageRepository/Document?documentID=2915",
-            "address": "P.O. Box 249 Wagoner OK 74467"
+            "office": "P.O. Box 249 Wagoner OK 74467"
         },
         {
             "name": "James Hanning",
@@ -55,8 +55,7 @@
             "title_held": "Sheriff",
             "phone": "918-485-3124",
             "img": "https://www.wagonercountyso.org/images/chris-elliott-sheriff.jpg",
-            "office": "307 E. Cherokee St., Wagoner, OK 74467",
-            "address": "307 E. Cherokee St., Wagoner, OK 74467"
+            "office": "307 E. Cherokee St., Wagoner, OK 74467"
         },
         {
             "name": "Chasity Levi",

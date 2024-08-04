@@ -53,7 +53,7 @@ def scrape_profile(url):
             address_parts = []
             for part in adr.find_all('span'):
                 address_parts.append(part.text.strip())
-            profile_data['address'] = ' '.join(address_parts)
+            profile_data['office'] = ' '.join(address_parts)
 
     # Extract phone number
     phone_tag = soup.find('div', {'class': 'field p-tel'})
