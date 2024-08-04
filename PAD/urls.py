@@ -19,6 +19,7 @@ from django.urls import path
 from common.views import test
 from home.views import home
 from search.views import search
+from profiles.views import profile
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,7 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', test, name='test'),
     path('', home, name='home'),
-    path('search/', search, name='search')
+    path('search/', search, name='search'),
+    path('profile/<str:category>/<int:target_id>/', profile, name='profile'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
