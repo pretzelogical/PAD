@@ -114,7 +114,13 @@
 
     {% if profile.website %}
     <p class="pb-4"><strong>Website: </strong>
-      <a href="{{ profile.website }}" target="_blank">{{ profile.website }}</a>
+      <a
+        href="{{ profile.website }}"
+        target="_blank"
+        class="text-blue-500 underline"
+      >
+      {{ profile.website }}
+      </a>
     </p>
     {% endif %}
 
