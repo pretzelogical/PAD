@@ -10,10 +10,10 @@ let index = 0;
 const totalItems = document.querySelectorAll('.carousel-item').length;
 
 // Number of items visible at once
-const visibleItems = 10;
+const visibleItems = 4;
 
 function updateCarousel() {
-    const offset = -(index * 150) / visibleItems;
+    const offset = -(index * 100) / visibleItems;
     track.style.transform = `translateX(${offset}%)`;
 }
 
@@ -23,7 +23,7 @@ leftButton.addEventListener('click', () => {
 });
 
 rightButton.addEventListener('click', () => {
-    index = (index + 1) % totalItems;
+    index = (index + 2) % totalItems;
     updateCarousel();
 });
 

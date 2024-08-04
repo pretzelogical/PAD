@@ -52,7 +52,7 @@ header {
 }
 
 .carousel-item {
-  flex: 1 0; /* 25% of the track to show four items */
+  flex: 1 0 25%; /* 25% of the track to show four items */
 }
 
 .card {
