@@ -57,6 +57,18 @@ class Politician(Profile):
     office = models.CharField(max_length=100, blank=True, null=True)
     title_held = models.CharField(max_length=100, blank=True, null=True)
 
+    class PartyChoices(models.TextChoices):
+        DEMOCRAT = 'D', 'd'
+        REPUBLICAN = 'R', 'r'
+        INDEPENDENT = 'I', 'i'
+        OTHER = 'O', 'o'
+
+    party = models.CharField(
+        max_length=1,
+        choices=PartyChoices.choices,
+        default=PartyChoices.OTHER
+    )
+
     @staticmethod
     def from_json(json_data: dict, **kwargs):
         """ Converts a json field with field politician
