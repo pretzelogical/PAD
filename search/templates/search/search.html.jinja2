@@ -12,10 +12,10 @@
   <div>
     <div class="flex justify-center">
       <form
-        method="get"
         hx-get="/search"
         hx-target="#searchResults"
         hx-swap="innerHTMl"
+        hx-trigger="submit, keyup delay:500ms"
         class="flex flex-col w-3/4 lg:w-11/12"
       >
       <div class="flex mb-4">
@@ -26,7 +26,6 @@
             rounded-l-full px-10 w-full"
         >
         <button
-          type="submit"
           class="bg-zinc-600 py-2 pr-3 pl-1 text-center flex items-center justify-center
             hover:bg-zinc-500 rounded-r-full"
         >
@@ -53,6 +52,7 @@
       <p>Search results</p>
     </div>
     <div id="searchResults">
+      {% include "search/components/search_results.html.jinja2" %}
     </div>
   </div>
 </div>
