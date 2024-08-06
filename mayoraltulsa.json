@@ -1,0 +1,49 @@
+{
+  "politician": [
+    {
+      "name": "Casey Bradford",
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://www.facebook.com/photo/?fbid=122093831258305803&set=a.122093822258305803",
+      "party": "N"
+    },
+    {
+      "name": "Kaleb Hoosier",
+      "title_held": "Tulsa Mayoral Candidate",
+      "party": "N"
+    },
+    {
+      "name": "John Jolley",
+      "title_held": "Tulsa Mayoral Candidate",
+      "party": "N"
+    },
+    {
+      "name": "Karen Keith",
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://karenkeith.org/wp-content/uploads/2023/11/AC-Headshot-topaz-enhance-6x-faceai-sharpen-2.png",
+      "party": "N"
+    },
+    {
+      "name": "Monroe Nichols",
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Monroe_Nichols.jpg",
+      "party": "N"
+    },
+    {
+      "name": "Brent L. VanNorman",
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/BrentVanNorman.png",
+      "party": "N"
+    },
+    {
+      "name": "Paul Tay",
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/IMG_20190130_195838.jpg",
+      "party": "N"
+    }
+  ],
+  "organization": {
+      "name": "City of Tulsa",
+      "org_type": "Mayor of Tulsa",
+      "origin": "Tulsa, OK"
+  }
+}
