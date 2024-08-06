@@ -7,36 +7,30 @@ from django.http import HttpResponseBadRequest
 
 def search(request):
     """ Search for either a politician or an organization """
+    query = request.GET.get('q', '')
+    category = request.GET.get('category', 'politician')
+
+    if category == 'politician':
+        poli = Politician.objects.filter(name__icontains=query)
+        context = {
+            'search_results': {
+                'politician': poli,
+            }
+        }
+
+    if category == 'organization':
+        org = Organization.objects.filter(name__icontains=query)
+        context = {
+            'search_results': {
+                'organization': org,
+            }
+        }
+
     if request.htmx:
-        query = request.GET.get('q', '')
-        category = request.GET.get('category', 'politician')
+        return render(
+            request,
+            'search/components/search_results.html.jinja2',
+            context
+        )
 
-        if category == 'politician':
-            poli = Politician.objects.filter(name__icontains=query)
-            context = {
-                'search_results': {
-                    'politician': poli,
-                }
-            }
-            return render(
-                request,
-                'search/components/search_results.html.jinja2',
-                context
-            )
-
-        if category == 'organization':
-            org = Organization.objects.filter(name__icontains=query)
-            context = {
-                'search_results': {
-                    'organization': org,
-                }
-            }
-            return render(
-                request,
-                'search/components/search_results.html.jinja2',
-                context
-            )
-
-        # Invalid category
-        return HttpResponseBadRequest('Invalid Category')
-    return render(request, 'search/search.html.jinja2')
+    return render(request, 'search/search.html.jinja2', context)
