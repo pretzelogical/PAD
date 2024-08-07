@@ -2,8 +2,20 @@
   <div class="border border-zinc-500 rounded-sm bg-zinc-300">
 
     <div class="grid grid-cols-2 border-b border-b-zinc-500">
-      <button class="p-2 border-r border-r-zinc-500">Politicians</button>
-      <button class="p-2">Organizations</button>
+      <button
+        class="p-2 border-r border-r-zinc-500"
+        hx-get="/?popular=politician"
+        hx-target="#popularItems"
+        hx-swap="innerHTML"
+        hx-trigger="click"
+      >Politicians</button>
+      <button
+        class="p-2"
+        hx-get="/?popular=organization"
+        hx-target="#popularItems"
+        hx-swap="innerHTML"
+        hx-trigger="click"
+      >Organizations</button>
     </div>
 
     <div id="popularItems">

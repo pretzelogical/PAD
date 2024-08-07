@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from common.models import Article, Politician
+from common.models import Article, Politician, Organization
 
 # Create your views here.
 
@@ -7,7 +7,8 @@ from common.models import Article, Politician
 def home(request):
     articles = Article.objects.all()[:5]
     article_list = {}
-    # profile_category = request.GET.get('category', 'politician')
+    popular_category = request.GET.get('popular', 'politician')
+    popular = {}
 
     if len(articles) <= 0:
         article_list = {
@@ -20,15 +21,23 @@ def home(request):
             'articles': articles[1:],
         }
 
+    if popular_category == 'politician':
+        popular = {
+            'profiles': Politician.objects.all().order_by('-views')[:10],
+            'category': popular_category,
+        }
+    else:
+        popular = {
+            'profiles': Organization.objects.all().order_by('-views')[:10],
+            'category': popular_category,
+        }
+
     context = {
         'article_list': article_list,
-        'popular': {
-            'profiles': Politician.objects.all().order_by('-views')[:10],
-            'category': 'politician',
-        }
+        'popular': popular
     }
 
-    if request.htmx and request.GET.get('HX-Target') == 'popularItems':
+    if request.htmx and request.htmx.target == 'popularItems':
         return render(
             request,
             'home/components/popular_items.html.jinja2',
