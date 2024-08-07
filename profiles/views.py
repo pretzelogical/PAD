@@ -9,13 +9,19 @@ def profile(request, **kwargs):
     target_id = kwargs.get('target_id', None)
 
     if category == 'politician':
+        poli = Politician.objects.get(id=target_id)
+        poli.views += 1
+        poli.save()
         context = {
-            'profile': Politician.objects.get(id=target_id),
+            'profile': poli,
         }
         return render(request, 'profiles/profile.html.jinja2', context)
     if category == 'organization':
+        org = Organization.objects.get(id=target_id)
+        org.views += 1
+        org.save()
         context = {
-            'profile': Organization.objects.get(id=target_id),
+            'profile': org
         }
         return render(request, 'profiles/profile.html.jinja2', context)
 
