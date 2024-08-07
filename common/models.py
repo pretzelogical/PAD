@@ -30,6 +30,7 @@ class Profile(Base):
         null=True
     )
     description = models.CharField(blank=True, max_length=500, null=True)
+    views = models.BigIntegerField(default=0)
 
     def add_image(self, img_url):
         """

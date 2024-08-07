@@ -22,11 +22,15 @@
     <h1 class="text-3xl font-bold">{{ profile.name }}</h1>
 
     {% if profile.title_held %}
-    <h3 class="text-2xl font-bold pb-8">{{ profile.title_held }}</h3>
+    <h3 class="text-2xl font-bold pb-2">{{ profile.title_held }}</h3>
     {% endif %}
 
     {% if profile.org_type %}
-    <h3 class="text-2xl font-bold pb-8">{{ profile.org_type }}</h3>
+    <h3 class="text-2xl font-bold pb-2">{{ profile.org_type }}</h3>
+    {% endif %}
+
+    {% if profile.views %}
+    <p class="text-sm">Views: {{ profile.views }}</p>
     {% endif %}
   </div>
 
