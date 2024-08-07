@@ -1,0 +1,9 @@
+<ul class="p-2">
+  {% for profile in popular.profiles %}
+  <li>
+    <a href="/profile/{{ popular.category }}/{{ profile.id }}">
+      {{ profile.name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
