@@ -4,14 +4,16 @@ from common.models import Politician, Organization
 
 def search(request):
     """ Search for either a politician or an organization """
-    query = request.GET.get('q', '')
-    category = request.GET.get('category', 'politician')
-    page = int(request.GET.get('page', 0))
-    PAGE_SIZE = 3 * 3
 
-    def create_context(category, query, page):
-        ctx_prof = {}
+    def create_context():
+        query = request.GET.get('q', '')
+        category = request.GET.get('category', 'politician')
+        page = int(request.GET.get('page', 0))
+        PAGE_SIZE = 3 * 5
+
         limit = 0
+        ctx_prof = {}
+
         if category == 'politician':
             poli = Politician.objects.filter(
                 name__icontains=query
@@ -60,11 +62,11 @@ def search(request):
         return render(
             request,
             'search/components/results.html.jinja2',
-            create_context(category, query, page)
+            create_context()
         )
 
     return render(
         request,
         'search/search.html.jinja2',
-        create_context(category, query, page)
+        create_context()
     )

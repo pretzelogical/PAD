@@ -657,6 +657,10 @@ body {
   margin-right: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -710,13 +714,13 @@ body {
   width: 24rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .cursor-pointer {
@@ -1040,6 +1044,11 @@ body {
 .hover\:bg-zinc-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-zinc-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }
 
 .hover\:shadow-2xl:hover {

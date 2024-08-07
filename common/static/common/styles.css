@@ -657,12 +657,12 @@ body {
   margin-right: 0.5rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
