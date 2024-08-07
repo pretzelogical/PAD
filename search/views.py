@@ -6,45 +6,49 @@ def search(request):
     """ Search for either a politician or an organization """
     query = request.GET.get('q', '')
     category = request.GET.get('category', 'politician')
-    page = int(request.GET.get('page', '0'))
+    page = int(request.GET.get('page', 0))
     PAGE_SIZE = 3 * 3
 
     def create_context(category, query, page):
         ctx_prof = {}
+        limit = 0
         if category == 'politician':
             poli = Politician.objects.filter(
                 name__icontains=query
             )[page * PAGE_SIZE:page * PAGE_SIZE + PAGE_SIZE]
-            org = None
             ctx_prof = {
                 'politician': poli,
-                'page': {
-                    'total': list(
-                        range(len(Politician.objects.all()) // PAGE_SIZE)
-                    ),
-                }
+                'organization': []
             }
+            limit = (
+                Politician
+                .objects
+                .filter(name__icontains=query).count() // PAGE_SIZE
+            )
 
         if category == 'organization':
             org = Organization.objects.filter(
                 name__icontains=query
             )[page * PAGE_SIZE:page * PAGE_SIZE + PAGE_SIZE]
-            poli = None
             ctx_prof = {
                 'organization': org,
-                'page': {
-                    'total': list(
-                        range(len(Organization.objects.all()) // PAGE_SIZE)
-                    ),
-                }
+                'politician': []
             }
-
-        if not ctx_prof:
-            return {}
+            limit = (
+                Organization
+                .objects
+                .filter(name__icontains=query).count() // PAGE_SIZE
+            )
 
         return {
             'search_results': {
                 **ctx_prof,
+                'page': {
+                    'current': page,
+                    'next': page + 1,
+                    'previous': page - 1,
+                    'limit': limit
+                },
                 'request': {
                     'query': query,
                     'category': category,
@@ -52,12 +56,10 @@ def search(request):
             }
         }
 
-    print(create_context(category, query, page))
-
     if request.htmx:
         return render(
             request,
-            'search/components/search_results.html.jinja2',
+            'search/components/results.html.jinja2',
             create_context(category, query, page)
         )
 

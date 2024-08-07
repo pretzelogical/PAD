@@ -48,19 +48,6 @@
             <option value="organization">Organization</option>
           </select>
         </div>
-        <div class="flex flex-col w-fit">
-          <label for="pageSelect">Page:</label>
-          <select
-            name="page"
-            id="pageSelect"
-            name="page"
-            class="bg-zinc-700 text-white rounded-sm p-4"
-          >
-            {% for i in search_results.page.total %}
-            <option value="{{ i }}">{{ i }}</option>
-            {% endfor %}
-          </select>
-        </div>
       </div>
       </form>
     </div>
@@ -68,7 +55,11 @@
       <p>Search results</p>
     </div>
     <div id="searchResults">
-      {% include "search/components/search_results.html.jinja2" %}
+      {% include "search/components/items.html.jinja2" %}
+    </div>
+
+    <div id="searchPagination">
+      {% include "search/components/pagination.html.jinja2" %}
     </div>
   </div>
 </div>

@@ -1,0 +1,28 @@
+<div class="flex justify-between text-white mt-4">
+  <div>
+    {% if search_results.page.current >= 1 %}
+    <button
+    hx-get="/search?q={{ search_results.request.query }}&category={{ search_results.request.category }}&page={{ search_results.page.previous }}"
+    hx-target="#searchResults"
+    hx-swap="innerHTML"
+    hx-trigger="click"
+    class="bg-zinc-700 p-2 text-center flex items-center justify-center
+      hover:bg-zinc-600 rounded-sm"
+  >
+    Previous</button>
+    {% endif %}
+  </div>
+  <div>
+    {% if search_results.page.current < search_results.page.limit %}
+    <button
+    hx-get="/search?q={{ search_results.request.query }}&category={{ search_results.request.category }}&page={{ search_results.page.next }}"
+    hx-target="#searchResults"
+    hx-swap="innerHTML"
+    hx-trigger="click"
+    class="bg-zinc-700 p-2 text-center flex items-center justify-center
+      hover:bg-zinc-600 rounded-sm"
+  >
+    Next</button>
+    {% endif %}
+  </div>
+</div>
