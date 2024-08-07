@@ -20,7 +20,6 @@
         sidebar.classList.remove('sidebar-hidden');
       }
       isSidebarVisible = !isSidebarVisible;
-      console.log(`isSidebarVisible: ${isSidebarVisible}`);
     }
 
     toggleBtn.addEventListener('click', toggleSidebar);
