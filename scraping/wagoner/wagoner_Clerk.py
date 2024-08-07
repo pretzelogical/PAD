@@ -53,7 +53,7 @@ def scrape_profile(url):
             address_parts = []
             for part in adr.find_all('span'):
                 address_parts.append(part.text.strip())
-            profile_data['address'] = ' '.join(address_parts)
+            profile_data['office'] = ' '.join(address_parts)
 
     # Extract phone number
     phone_tag = soup.find('div', {'class': 'field p-tel'})
@@ -61,7 +61,10 @@ def scrape_profile(url):
         phone_a_tag = phone_tag.find('a', href=True)
         profile_data['phone'] = phone_a_tag.text.strip() if phone_a_tag else profile_data['phone']
 
-    return profile_data
+    # Remove keys with None or "N/A" values
+    filtered_profile_data = {k: v for k, v in profile_data.items() if v not in (None, 'N/A')}
+
+    return filtered_profile_data
 
 def main():
     profile_urls = [
