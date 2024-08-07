@@ -1,10 +1,22 @@
 (() => {
+/**
+ * Creates a toggle button for the sidebar. When clicked, it toggles the
+ * visibility of the sidebar.
+ *
+ * @return {Object} An object with a `toggleSidebar` method that can be used to
+ * toggle the sidebar visibility.
+ */
   function createSidebarToggle() {
     let isSidebarVisible = false;
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebarItems = document.getElementById('sidebarItems');
     const sidebar = document.getElementById('sidebar');
 
+    /**
+     * Toggles the visibility of the sidebar.
+     *
+     * @return {undefined}
+     */
     function toggleSidebar() {
       if (isSidebarVisible) {
         sidebarItems.classList.add('sidebarItems-hidden');
