@@ -15,7 +15,7 @@
         hx-get="/search"
         hx-target="#searchResults"
         hx-swap="innerHTMl"
-        hx-trigger="submit, keyup delay:500ms"
+        hx-trigger="submit, keyup delay:500ms, changed delay:500ms"
         class="flex flex-col w-3/4 lg:w-11/12"
       >
       <div class="flex mb-4">
@@ -36,15 +36,31 @@
         </button>
       </div>
       <div class="px-10">
-        <select
-          name="category"
-          id="categorySelect"
-          name="category"
-          class="bg-zinc-700 text-white rounded-sm p-4"
-        >
-          <option value="politician">Politician</option>
-          <option value="organization">Organization</option>
-        </select>
+        <div class="flex flex-col w-fit">
+          <label for="categorySelect">Category:</label>
+          <select
+            name="category"
+            id="categorySelect"
+            name="category"
+            class="bg-zinc-700 text-white rounded-sm p-4"
+          >
+            <option value="politician">Politician</option>
+            <option value="organization">Organization</option>
+          </select>
+        </div>
+        <div class="flex flex-col w-fit">
+          <label for="pageSelect">Page:</label>
+          <select
+            name="page"
+            id="pageSelect"
+            name="page"
+            class="bg-zinc-700 text-white rounded-sm p-4"
+          >
+            {% for i in search_results.page.total %}
+            <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+          </select>
+        </div>
       </div>
       </form>
     </div>
