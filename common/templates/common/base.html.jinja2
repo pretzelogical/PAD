@@ -50,12 +50,32 @@
             <li class="border-b border-gray-200">
               <a href="/search" class="pointer text-2xl">Search</a>
             </li>
+            <li class="border-b border-gray-200">
+              <button id="showDisclaimer" class="pointer text-2xl">Disclaimer</button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     {% block content %}{% endblock %}
   </main>
+
+  <!-- Disclaimer Popup -->
+  <div id="disclaimerPopup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-30">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-1/3 relative">
+      <button id="closeDisclaimer" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
+      <p>The information provided in this database is collected from various public sources and is intended for informational purposes only. While we strive to ensure the accuracy and completeness of the data, we cannot guarantee that all information is current or correct.</p>
+      <p class="mt-2">The inclusion of any elected official or organization in this database does not imply endorsement or recommendation by the creators of this project.</p>
+      <p class="mt-2">Users of this database should exercise caution and perform their own verification before making any decisions based on the information provided. We are not responsible for any consequences resulting from the use of this data.</p>
+      <p class="mt-2">This project is intended for educational and informational purposes only. It is not intended to be used for any unlawful or malicious activities. Users must comply with all applicable laws and regulations regarding the use of this information.</p>
+      <p class="mt-2">If you have any questions or concerns about the information provided in this database, please contact us at [Email].</p>
+    </div>
+  </div>
 
   <!-- <footer class="flex items-center justify-center fixed bottom-0 left-0 right-0">
     <p>&copy; 2024.</p>
