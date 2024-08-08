@@ -21,7 +21,13 @@
             <p class="text-lg font-bold px-2 text-gray-600 dark:text-gray-300">Related:</p>
             {% for poli in article_list.mainArticle.related.all|slice:":5" %}
             <a href="/profile/politician/{{ poli.id }}">
-                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                <img
+                  {% if poli.image %}
+                  src="{{ poli.image.url }}"
+                  {% else %}
+                  src="{% static 'common/elements/logo-gray.svg' %}"
+                  {% endif %}
+                  alt="Profile picture for {{ poli.name }}"
                   class="object-cover w-8 h-8 rounded-full mr-2">
             </a>
             {% endfor %}
