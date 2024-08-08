@@ -4,6 +4,9 @@
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebarItems = document.getElementById('sidebarItems');
     const sidebar = document.getElementById('sidebar');
+    const disclaimerBtn = document.getElementById('showDisclaimer');
+    const disclaimerPopup = document.getElementById('disclaimerPopup');
+    const closeDisclaimerBtn = document.getElementById('closeDisclaimer');
 
     function toggleSidebar() {
       if (isSidebarVisible) {
@@ -22,9 +25,22 @@
       isSidebarVisible = !isSidebarVisible;
     }
 
-    toggleBtn.addEventListener('click', toggleSidebar);
+    function showDisclaimer() {
+      disclaimerPopup.classList.remove('hidden');
+    }
 
-    return { toggleSidebar };
+    function closeDisclaimer() {
+      disclaimerPopup.classList.add('hidden');
+    }
+
+    toggleBtn.addEventListener('click', toggleSidebar);
+    disclaimerBtn.addEventListener('click', showDisclaimer);
+    closeDisclaimerBtn.addEventListener('click', closeDisclaimer);
+    disclaimerPopup.addEventListener('click', (e) => {
+      if (e.target === disclaimerPopup) closeDisclaimer();
+    });
+
+    return { toggleSidebar, showDisclaimer, closeDisclaimer };
   }
 
   createSidebarToggle();
