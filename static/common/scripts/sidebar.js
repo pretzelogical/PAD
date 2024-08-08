@@ -1,5 +1,5 @@
 (() => {
-  function createSidebarToggle() {
+  function createSidebar() {
     let isSidebarVisible = false;
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebarItems = document.getElementById('sidebarItems');
@@ -43,5 +43,5 @@
     return { toggleSidebar, showDisclaimer, closeDisclaimer };
   }
 
-  createSidebarToggle();
+  createSidebar();
 })();
