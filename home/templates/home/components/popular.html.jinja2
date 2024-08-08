@@ -3,7 +3,7 @@
 
     <div class="grid grid-cols-2 border-b border-b-zinc-500 text-white">
       <button
-        class="p-2 border-r bg-zinc-600 hover:bg-zinc-500
+        class="p-2 border-r bg-zinc-600 dark:bg-zinc-800 hover:bg-zinc-500
          border-r-gray-200 rounded-tl-sm text-xl"
         hx-get="/?popular=politician"
         hx-target="#popularItems"
@@ -11,7 +11,7 @@
         hx-trigger="click"
       >Politicians</button>
       <button
-        class="p-2 bg-zinc-600 hover:bg-zinc-500 rounded-tr-sm text-xl overflow-hidden"
+        class="p-2 bg-zinc-600 dark:bg-zinc-800 hover:bg-zinc-500 rounded-tr-sm text-xl overflow-hidden"
         hx-get="/?popular=organization"
         hx-target="#popularItems"
         hx-swap="innerHTML"

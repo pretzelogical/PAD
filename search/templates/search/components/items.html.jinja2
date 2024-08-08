@@ -1,7 +1,7 @@
 {% load static %}
 <ul class="grid gap-x-5 gap-y-8" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
   {% for poli in search_results.politician %}
-  <li class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md" style="transition: all 0.1s ease-in;">
+  <li class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md dark:bg-zinc-700" style="transition: all 0.1s ease-in;">
     <a href="/profile/politician/{{ poli.id }}" class="flex">
       {% if poli.image %}
       <div class="h-full overflow-hidden">
