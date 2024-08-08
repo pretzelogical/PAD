@@ -1,0 +1,36 @@
+{% load static %}
+<ul class="p-2">
+  {% for profile in popular.profiles %}
+  <li
+  class="shadow-md rounded-sm hover:shadow-xl mb-4 hover:-translate-y-1"
+  style="transition: all 0.1s ease-in;"
+  >
+    <a
+      href="/profile/{{ popular.category }}/{{ profile.id }}"
+      class="flex items-center"
+    >
+      {% if profile.image %}
+      <img
+        src="{{ profile.image.url }}"
+        alt="Profile picture for {{ profile.name }}"
+        width="50"
+        height="50"
+        class="w-12 h-12 rounded-l-sm"
+      >
+      {% else %}
+      <img
+        src="{% static 'common/elements/logo-gray.svg' %}"
+        alt="Profile picture for {{ profile.name }}"
+        width="50"
+        height="50"
+        class="w-12 h-12 rounded-l-sm"
+      >
+      {% endif %}
+      <div class="flex justify-between w-full px-4">
+        <p>{{ profile.name }}</p>
+        <p>Views: {{ profile.views }}</p>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

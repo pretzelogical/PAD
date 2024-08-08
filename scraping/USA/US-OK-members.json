@@ -1,0 +1,71 @@
+{
+  "politician": [
+    {
+      "name": "Kevin Hern",
+      "title_held": "Congressional District 1",
+      "office": "United States House of Representatives, 2448 E. 81st Street, Suite 5150, Tulsa OK 74137/1019 Longworth HOB, Washington DC 20515",
+      "phone": "918.935.3222/202.225.2211",
+      "img": "https://www.govtrack.us/static/legislator-photos/412748-200px.jpeg",
+      "district": 1,
+      "party": "R"
+    },
+    {
+      "name": "Josh Brecheen",
+      "title_held": "Congressional District 2",
+      "office": "United States House of Representatives, 223 W Patti Page Blvd. Claremore, OK 74017/1208 Longworth HOB Washington, DC 20515",
+      "phone": "918.283.6262/202.225.2701",
+      "img": "https://www.govtrack.us/static/legislator-photos/456931-200px.jpeg",
+      "district": 2,
+      "party": "R"
+    },
+    {
+      "name": "Frank Lucas",
+      "title_held": "Congressional District 3",
+      "office": "United States House of Representatives, 11528 SW 15th Street, Suite 200, Yukon, OK 73099/2405 Rayburn HOB Washington, DC 20515",
+      "phone": "405.373.1958/202.225.5565",
+      "img": "https://www.govtrack.us/static/legislator-photos/400247-200px.jpeg",
+      "district": 3,
+      "party": "R"
+    },
+    {
+      "name": "Tom Cole",
+      "title_held": "Congressional District 4",
+      "office": "United States House of Representatives, 2424 Springer Dr., Suite 201, Norman, OK 73069/2207 Rayburn HOB Washington, DC 20515",
+      "phone": "405.329.6500/202.225.6165",
+      "img": "https://www.govtrack.us/static/legislator-photos/400077-200px.jpeg",
+      "district": 4,
+      "party": "R"
+    },
+    {
+      "name": "Stephanie Bice",
+      "title_held": "Congressional District 5",
+      "office": "United States House of Representatives, 500 N. Broadway, Suite 250, Oklahoma City, OK  73102/2437 Rayburn HOB Washington, DC 20515",
+      "phone": "405.300.6890/202.225.2132",
+      "img": "https://www.govtrack.us/static/legislator-photos/456841-200px.jpeg",
+      "district": 5,
+      "party": "R"
+    },
+    {
+      "name": "Markwayne Mullin",
+      "title_held": "United States Senator",
+      "office": "United States Senate, Washington, D.C. 20515/Tulsa Office: 1924 S. Utica Ave., Suite 530, Tulsa, OK 74104-6511",
+      "phone": "918.748.5111",
+      "img": "https://www.govtrack.us/static/legislator-photos/412568-200px.jpeg",
+      "party": "R"
+    },
+    {
+      "name": "James Lankford",
+      "title_held": "United States Senator",
+      "office": "United States Senate, Washington, D.C. 20515/Tulsa Office: 5810 East Skelly Drive, Tulsa, OK 74135",
+      "phone": "918.581.7651",
+      "img": "https://www.govtrack.us/static/legislator-photos/412464-200px.jpeg",
+      "party": "R"
+    }
+  ],
+  "organization": {
+    "name": "OK Congress Members",
+    "org_type": "US Congress",
+    "origin": "Oklahoma",
+    "website": "https://www.govtrack.us/congress/members/OK#senators"
+  }
+}

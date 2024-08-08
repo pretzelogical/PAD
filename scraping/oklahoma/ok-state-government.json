@@ -1,0 +1,323 @@
+{
+  "politician": [
+    {
+      "name": "Kevin Stitt",
+      "title_held": "Governor",
+      "office": "The Office of the Oklahoma State Governor, State Capitol Building, 2300 Lincoln Ave. Oklahoma City, OK 73105",
+      "phone": "405.521.2342",
+      "img": "https://oklahoma.gov/content/dam/ok/en/governor/images/gov-stitt-official-photo.jpg",
+      "party": "R"
+    },
+    {
+      "name": "Ally Seifried",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #528.1",
+      "phone": "405.521.5555",
+      "district": 2,
+      "party": "R",
+      "email": "ally.seifried@oksenate.gov"
+    },
+    {
+      "name": "Bill Coleman",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #426",
+      "phone": "405.521.5581",
+      "district": 10,
+      "party": "R",
+      "email": "bill.coleman@oksenate.gov"
+    },
+    {
+      "name": "Kevin Matthews",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #516",
+      "phone": "405.521.5598",
+      "district": 11,
+      "party": "D",
+      "email": "matthews@oksenate.gov"
+    },
+    {
+      "name": "Todd Gollihare",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #531",
+      "phone": "405.521.5528",
+      "district": 12,
+      "party": "R",
+      "email": "todd.gollihare@oksenate.gov"
+    },
+    {
+      "name": "Joe Newhouse",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #238",
+      "phone": "405.521.5675",
+      "district": 25,
+      "party": "R",
+      "email": "newhouse@oksenate.gov"
+    },
+    {
+      "name": "Nathan Dahm",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #526",
+      "phone": "405.521.5551",
+      "district": 33,
+      "party": "R",
+      "email": "dahm@oksenate.gov"
+    },
+    {
+      "name": "Dana Prieto",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #445",
+      "phone": "405.521.5566",
+      "district": 34,
+      "party": "R",
+      "email": "dana.prieto@oksenate.gov"
+    },
+    {
+      "name": "JoAnna Dossett",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #515.2",
+      "phone": "405.521.5624",
+      "district": 35,
+      "party": "D",
+      "email": "joanna.dossett@oksenate.gov"
+    },
+    {
+      "name": "John Haste",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #428",
+      "phone": "405.521.5602",
+      "district": 36,
+      "party": "R",
+      "email": "john.haste@oksenate.gov"
+    },
+    {
+      "name": "Cody Rogers",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #430",
+      "phone": "405.521.5600",
+      "district": 37,
+      "party": "R",
+      "email": "cody.rogers@oksenate.gov"
+    },
+    {
+      "name": "Dave Rader",
+      "title_held": "State Senator",
+      "office": "Oklahoma State Senate, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #233",
+      "phone": "405.521.5620",
+      "district": 39,
+      "party": "R",
+      "email": "rader@oksenate.gov"
+    },
+    {
+      "name": "Mark Lepak",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #453",
+      "phone": "405.557.7380",
+      "district": 9,
+      "party": "R",
+      "email": "mark.lepak@okhouse.gov"
+    },
+    {
+      "name": "John Kane",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #202",
+      "phone": "405.557.7358",
+      "district": 11,
+      "party": "R",
+      "email": "john.kane@okhouse.gov"
+    },
+    {
+      "name": "Scott Fetgatter",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #455",
+      "phone": "405.557.7373",
+      "district": 16,
+      "party": "R",
+      "email": "scott.fetgatter@okhouse.gov"
+    },
+    {
+      "name": "Terry O'Donnell",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #305",
+      "phone": "405.557.7379",
+      "district": 23,
+      "party": "R",
+      "email": "terry.odonnell@okhouse.gov"
+    },
+    {
+      "name": "Chris Banning",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #340",
+      "phone": "405.557.7306",
+      "district": 24,
+      "party": "R",
+      "email": "chris.banning@okhouse.gov"
+    },
+    {
+      "name": "Kyle Hilbert",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #406",
+      "phone": "405.557.7353",
+      "district": 29,
+      "party": "R",
+      "email": "kyle.hilbert@okhouse.gov"
+    },
+    {
+      "name": "Mark Lawson",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #204",
+      "phone": "405.557.7414",
+      "district": 30,
+      "party": "R",
+      "email": "mark.lawson@okhouse.gov"
+    },
+    {
+      "name": "Clay Staires",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #546",
+      "phone": "405.557.7390",
+      "district": 66,
+      "party": "R",
+      "email": "clay.staires@okhouse.gov"
+    },
+    {
+      "name": "Jeff Boatman",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #336",
+      "phone": "405.557.7341",
+      "district": 67,
+      "party": "R",
+      "email": "jeff.boatman@okhouse.gov"
+    },
+    {
+      "name": "Lonnie Sims",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #248",
+      "phone": "405.557.7340",
+      "district": 68,
+      "party": "R",
+      "email": "lonnie.sims@okhouse.gov"
+    },
+    {
+      "name": "Mark Tedford",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #546",
+      "phone": "405.557.7331",
+      "district": 69,
+      "party": "R",
+      "email": "mark.tedford@okhouse.gov"
+    },
+    {
+      "name": "Suzanne Schreiber",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #541",
+      "phone": "405.557.7359",
+      "district": 70,
+      "party": "D",
+      "email": "suzanne.schreiber@okhouse.gov"
+    },
+    {
+      "name": "Amanda Swope",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #603",
+      "phone": "405.557.7361",
+      "district": 71,
+      "party": "D",
+      "email": "amanda.swope@okhouse.gov"
+    },
+    {
+      "name": "Monroe Nichols",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #502",
+      "phone": "405.557.7391",
+      "district": 72,
+      "party": "D",
+      "email": "monroe.brewer@okhouse.gov"
+    },
+    {
+      "name": "Regina Goodwin",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #503",
+      "phone": "405.557.7406",
+      "district": 73,
+      "party": "D",
+      "email": "regina.goodwin@okhouse.gov"
+    },
+    {
+      "name": "Mark Vancuren",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #243",
+      "phone": "405.557.7377",
+      "district": 74,
+      "party": "R",
+      "email": "mark.vancuren@okhouse.gov"
+    },
+    {
+      "name": "T.J. Marti",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #500",
+      "phone": "405.557.7356",
+      "district": 75,
+      "party": "R",
+      "email": "t.j.marti@okhouse.gov"
+    },
+    {
+      "name": "Ross Ford",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #300",
+      "phone": "405.557.7347",
+      "district": 76,
+      "party": "R",
+      "email": "ross.ford@okhouse.gov"
+    },
+    {
+      "name": "John Waldron",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #544",
+      "phone": "405.557.7410",
+      "district": 77,
+      "party": "D",
+      "email": "john.waldron@okhouse.gov"
+    },
+    {
+      "name": "Meloyde Blancett",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #545",
+      "phone": "405.557.7334",
+      "district": 78,
+      "party": "D",
+      "email": "meloyde.blancett@okhouse.gov"
+    },
+    {
+      "name": "Melissa Provenzano",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #603",
+      "phone": "405.557.7330",
+      "district": 79,
+      "party": "D",
+      "email": "melissa.provenzano@okhouse.gov"
+    },
+    {
+      "name": "Stan May",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #300",
+      "phone": "405.557.7338",
+      "district": 80,
+      "party": "R",
+      "email": "stan.may@okhouse.gov"
+    },
+    {
+      "name": "Dean Davis",
+      "title_held": "State Representative",
+      "office": "Oklahoma House of Representatives, State Capitol, 2300 N. Lincoln Ave. Oklahoma City, OK 73105, Room #500",
+      "phone": "405.557.7362",
+      "district": 98,
+      "party": "R",
+      "email": "dean.davis@okhouse.gov"
+    }
+  ],
+  "organization": {
+    "name": "OK State Government",
+    "org_type": "State Government",
+    "origin": "Oklahoma"
+  }
+}
