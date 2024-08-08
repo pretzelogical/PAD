@@ -1,5 +1,5 @@
 {% load static %}
-<ul class="grid grid-cols-3 gap-x-2 gap-y-4">
+<ul class="grid gap-x-2 gap-y-4">
 
   {% if article_list.mainArticle %}
   <li class="col-span-2 hover:-translate-y-2 shadow-xl hover:shadow-2xl border-4 border-white dark:bg-zinc-800 dark:border-gray-800 rounded-md" style="transition: all 0.1s ease-in">
@@ -21,7 +21,13 @@
             <p class="text-lg font-bold px-2 text-gray-600 dark:text-gray-300">Related:</p>
             {% for poli in article_list.mainArticle.related.all|slice:":5" %}
             <a href="/profile/politician/{{ poli.id }}">
-                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                <img
+                  {% if poli.image %}
+                  src="{{ poli.image.url }}"
+                  {% else %}
+                  src="{% static 'common/elements/logo-gray.svg' %}"
+                  {% endif %}
+                  alt="Profile picture for {{ poli.name }}"
                   class="object-cover w-8 h-8 rounded-full mr-2">
             </a>
             {% endfor %}
