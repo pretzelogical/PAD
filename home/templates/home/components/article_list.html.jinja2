@@ -14,22 +14,22 @@
           <p class="font-bold text-2xl">{{ article_list.mainArticle.title }}</p>
           <p class="py-2">{{ article_list.mainArticle.preview }}</p>
         </div>
+        <div class="flex justify-between">
+          <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article_list.mainArticle.author }}</p>
+          {% if article_list.mainArticle.related.all %}
+          <div class="flex items-center h-full">
+            <p class="text-lg font-bold px-2 mt-auto text-gray-600">Related:</p>
+            {% for poli in article_list.mainArticle.related.all|slice:":5" %}
+            <a href="/profile/politician/{{ poli.id }}">
+                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                  class="object-cover w-8 h-8 rounded-full mr-2">
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
     </a>
-    <div class="flex justify-between">
-      <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article_list.mainArticle.author }}</p>
-      {% if article_list.mainArticle.related.all %}
-      <div class="flex items-center h-full">
-        <p class="text-lg font-bold px-2 mt-auto text-gray-600">Related:</p>
-        {% for poli in article_list.mainArticle.related.all|slice:":5" %}
-        <a href="/profile/politician/{{ poli.id }}">
-            <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
-              class="object-cover w-8 h-8 rounded-full mr-2">
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
   </li>
   {% endif %}
 
@@ -47,22 +47,22 @@
           <p class="font-bold text-2xl">{{ article.title }}</p>
           <p class="py-2 overflow-hidden">{{ article.preview }}</p>
         </div>
+        <div class="flex justify-between">
+          <p class="text-lg font-bold mt-auto text-gray-600">{{ article.author }}</p>
+          {% if article.related.all %}
+          <div class="flex items-center">
+            <p class="text-lg font-bold h-auto px-2 text-gray-600">Related:</p>
+            {% for poli in article.related.all|slice:":3" %}
+            <a href="/profile/politician/{{ poli.id }}">
+                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                  class="object-cover w-8 h-8 rounded-full mr-2">
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
     </a>
-    <div class="flex justify-between py-4 px-2">
-      <p class="text-lg font-bold mt-auto text-gray-600">{{ article.author }}</p>
-      {% if article.related.all %}
-      <div class="flex items-center">
-        <p class="text-lg font-bold h-auto px-2 text-gray-600">Related:</p>
-        {% for poli in article.related.all|slice:":3" %}
-        <a href="/profile/politician/{{ poli.id }}">
-            <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
-              class="object-cover w-8 h-8 rounded-full mr-2">
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
   </li>
   {% endfor %}
 </ul>
