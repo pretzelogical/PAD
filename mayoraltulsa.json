@@ -3,15 +3,17 @@
     {
       "name": "Casey Bradford",
       "title_held": "Tulsa Mayoral Candidate",
-      "img": "https://www.facebook.com/photo/?fbid=122093831258305803&set=a.122093822258305803"
+      "img": "https://bloximages.newyork1.vip.townnews.com/tulsaworld.com/content/tncms/assets/v3/editorial/c/7b/c7b86e56-063c-11ef-871b-7f46fe9e5b93/662fbc31515a3.image.jpg?resize=461%2C500"
     },
     {
       "name": "Kaleb Hoosier",
-      "title_held": "Tulsa Mayoral Candidate"
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/449447943_3630345337183287_4470235008306448522_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AYu72riGoIwQ7kNvgH2LJBF&_nc_ht=scontent-dfw5-2.xx&oh=00_AYCn9bB-oiZgkKoLrb_KalvoXA05HmfQuEYFdBuZvyaWhQ&oe=66B9BCA4"
     },
     {
       "name": "John Jolley",
-      "title_held": "Tulsa Mayoral Candidate"
+      "title_held": "Tulsa Mayoral Candidate",
+      "img": "https://bloximages.newyork1.vip.townnews.com/tulsaworld.com/content/tncms/assets/v3/editorial/c/4a/c4abc8e0-493d-11ef-bee6-3b136bd18ab1/66a0261e044af.image.jpg?resize=577%2C826"
     },
     {
       "name": "Karen Keith",
@@ -36,6 +38,7 @@
   ],
   "organization": {
       "name": "City of Tulsa",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Seal_of_Oklahoma.svg/150px-Seal_of_Oklahoma.svg.png",
       "org_type": "Mayor of Tulsa",
       "origin": "Tulsa, OK"
   }

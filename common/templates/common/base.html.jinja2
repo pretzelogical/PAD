@@ -8,30 +8,46 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="{% static 'common/styles.css' %}">
   <!-- Scripts -->
   <script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
   <script src="{% static 'common/scripts/sidebar.js' %}" defer></script>
+  <script src="{% static 'common/scripts/theme-toggle.js' %}" defer></script>
+  <script src="{% static 'common/scripts/scroll-to-top.js' %}" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'common/elements/favicon.svg' %}" type="image/x-icon">
 
   {% block title %}{% endblock %}
 </head>
 
-<body class="bg-gray-200 text-gray-800 h-screen">
+<body class="bg-gray-200 text-gray-800 dark:bg-zinc-900 dark:text-gray-100 h-screen">
 
-  <header class="bg-zinc-700 py-3 px-10 z-10 relative">
-    <div class="flex items-center">
-      <img width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
-      <h1 class="text-white text-4xl ml-2 font-bold">
-        <a href="/" class="text-white no-underline">State and Federal Entity Database</a>
-      </h1>
+  <header class="bg-zinc-700 dark:bg-zinc-800 py-3 px-10 z-10 relative">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <a href="/" class="text-white no-underline">
+          <img width="64" height="64" src="{% static 'common/elements/logo-white.svg' %}" alt="Logo">
+        </a>
+        <h1 class="text-white text-4xl ml-2 font-bold pl-8">
+          <a href="/" class="text-white no-underline">State and Federal Entity Database</a>
+        </h1>
+      </div>
+      <button id="theme-toggle" class="text-white">
+        <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707m1.414 1.414l-.707.707M21 12h-1M4 12H3m1.636-6.364l-.707-.707M6.343 4.929l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707m1.414 1.414l-.707.707M21 12h-1M4 12H3m1.636-6.364l-.707-.707M6.343 4.929l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8z"></path>
+        </svg>
+      </button>
     </div>
   </header>
 
   <main class="px-20 py-2">
     <nav
-      class="fixed top-0 left-0 bg-zinc-700 text-white h-screen
+      class="fixed top-0 left-0 bg-zinc-700 dark:bg-zinc-800 text-white h-screen
         pt-4 z-20 px-1 overflow-hidden sidebar sidebar-hidden"
       id="sidebar"
     >
@@ -48,12 +64,39 @@
             <li class="border-b border-gray-200">
               <a href="/search" class="pointer text-2xl">Search</a>
             </li>
+            <li class="border-b border-gray-200">
+              <button id="showDisclaimer" class="pointer text-2xl">Disclaimer</button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     {% block content %}{% endblock %}
   </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-10 right-10 bg-zinc-700 text-white p-3 rounded-full shadow-lg hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Disclaimer Popup -->
+  <div id="disclaimerPopup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-30">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-1/3 relative dark:bg-gray-800 dark:text-gray-100">
+      <button id="closeDisclaimer" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
+      <p>The information provided in this database is collected from various public sources and is intended for informational purposes only. While we strive to ensure the accuracy and completeness of the data, we cannot guarantee that all information is current or correct.</p>
+      <p class="mt-2">The inclusion of any elected official or organization in this database does not imply endorsement or recommendation by the creators of this project.</p>
+      <p class="mt-2">Users of this database should exercise caution and perform their own verification before making any decisions based on the information provided. We are not responsible for any consequences resulting from the use of this data.</p>
+      <p class="mt-2">This project is intended for educational and informational purposes only. It is not intended to be used for any unlawful or malicious activities. Users must comply with all applicable laws and regulations regarding the use of this information.</p>
+      <p class="mt-2">If you have any questions or concerns about the information provided in this database, please contact us at [IDKWHOEMAILTOUSE!].</p>
+    </div>
+  </div>
 
   <!-- <footer class="flex items-center justify-center fixed bottom-0 left-0 right-0">
     <p>&copy; 2024.</p>

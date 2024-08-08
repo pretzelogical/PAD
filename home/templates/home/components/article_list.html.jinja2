@@ -2,8 +2,8 @@
 <ul class="grid grid-cols-3 gap-x-2 gap-y-4">
 
   {% if article_list.mainArticle %}
-  <li class="col-span-2 hover:-translate-y-2 shadow-xl hover:shadow-2xl border-4" style="transition: all 0.1s ease-in">
-    <a href="{{ article_list.mainArticle.url }}" class="h-full border-4 rounded-md" target="_blank">
+  <li class="col-span-2 hover:-translate-y-2 shadow-xl hover:shadow-2xl border-4 border-white dark:bg-zinc-800 dark:border-gray-800 rounded-md" style="transition: all 0.1s ease-in">
+    <a href="{{ article_list.mainArticle.url }}" class="h-full rounded-md" target="_blank">
       {% if article_list.mainArticle.image %}
       <img width="500" height="500" class="w-full" src="{{ article_list.mainArticle.image.url }}" alt="Article Image">
       {% else %}
@@ -14,28 +14,28 @@
           <p class="font-bold text-2xl">{{ article_list.mainArticle.title }}</p>
           <p class="py-2">{{ article_list.mainArticle.preview }}</p>
         </div>
+        <div class="flex justify-between items-center mt-4">
+          <p class="text-lg font-bold text-gray-600 dark:text-gray-300">{{ article_list.mainArticle.author }}</p>
+          {% if article_list.mainArticle.related.all %}
+          <div class="flex items-center">
+            <p class="text-lg font-bold px-2 text-gray-600 dark:text-gray-300">Related:</p>
+            {% for poli in article_list.mainArticle.related.all|slice:":5" %}
+            <a href="/profile/politician/{{ poli.id }}">
+                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                  class="object-cover w-8 h-8 rounded-full mr-2">
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
     </a>
-    <div class="flex justify-between">
-      <p class="text-lg font-bold pb-4 px-2 mt-auto text-gray-600">{{ article_list.mainArticle.author }}</p>
-      {% if article_list.mainArticle.related.all %}
-      <div class="flex items-center h-full">
-        <p class="text-lg font-bold px-2 mt-auto text-gray-600">Related:</p>
-        {% for poli in article_list.mainArticle.related.all|slice:":5" %}
-        <a href="/profile/politician/{{ poli.id }}">
-            <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
-              class="object-cover w-8 h-8 rounded-full mr-2">
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
   </li>
   {% endif %}
 
   {% for article in article_list.articles %}
-  <li class="hover:-translate-y-2 shadow-xl hover:shadow-2xl flex flex-col" style="transition: all 0.1s ease-in">
-    <a href="{{ article.url }}" class="h-full border-4 rounded-md" target="_blank">
+  <li class="hover:-translate-y-2 shadow-xl hover:shadow-2xl flex flex-col border-4 border-white dark:bg-zinc-800 dark:border-gray-800 rounded-md" style="transition: all 0.1s ease-in">
+    <a href="{{ article.url }}" class="h-full rounded-md" target="_blank">
       {% if article.image %}
       <img width="500" height="500" class="w-full" src="{{ article.image.url }}" alt="Article Image">
       {% else %}
@@ -47,22 +47,22 @@
           <p class="font-bold text-2xl">{{ article.title }}</p>
           <p class="py-2 overflow-hidden">{{ article.preview }}</p>
         </div>
+        <div class="flex justify-between items-center mt-4">
+          <p class="text-lg font-bold text-gray-600 dark:text-gray-300">{{ article.author }}</p>
+          {% if article.related.all %}
+          <div class="flex items-center">
+            <p class="text-lg font-bold px-2 text-gray-600 dark:text-gray-300">Related:</p>
+            {% for poli in article.related.all|slice:":3" %}
+            <a href="/profile/politician/{{ poli.id }}">
+                <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
+                  class="object-cover w-8 h-8 rounded-full mr-2">
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
     </a>
-    <div class="flex justify-between py-4 px-2">
-      <p class="text-lg font-bold mt-auto text-gray-600">{{ article.author }}</p>
-      {% if article.related.all %}
-      <div class="flex items-center">
-        <p class="text-lg font-bold h-auto px-2 text-gray-600">Related:</p>
-        {% for poli in article.related.all|slice:":3" %}
-        <a href="/profile/politician/{{ poli.id }}">
-            <img src="{{ poli.image.url }}" alt="Profile picture for {{ poli.name }}"
-              class="object-cover w-8 h-8 rounded-full mr-2">
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
   </li>
   {% endfor %}
 </ul>
