@@ -15,6 +15,7 @@
   <script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
   <script src="{% static 'common/scripts/sidebar.js' %}" defer></script>
   <script src="{% static 'common/scripts/theme-toggle.js' %}" defer></script>
+  <script src="{% static 'common/scripts/scroll-to-top.js' %}" defer></script>
   <!-- Favicon -->
   <link rel="icon" href="{% static 'common/elements/favicon.svg' %}" type="image/x-icon">
 
@@ -35,7 +36,7 @@
       </div>
       <button id="theme-toggle" class="text-white">
         <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707m1.414 1.414l-.707.707M21 12h-1M4 12H3m1.636-6.364l-.707-.707M6.343 4.929l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8zM12 3v1m0 16v1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707m-9.9-9.9l-.707-.707M3.515 12h1M4 12H3m6.364-6.364l-.707-.707M12 3v1M12 3v1m0 16v1m0-16v1m6.364 1.636l-.707.707M18.071 4.93l-.707-.707M16.657 3.515l-.707-.707M12 3v1m0 16v1m0-16v1m6.364 1.636l-.707.707M18.071 4.93l-.707-.707M16.657 3.515l-.707-.707M12 3v1m0 16v1m6.364-1.636l-.707-.707M18.071 19.071l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707m1.414 1.414l-.707.707M21 12h-1M4 12H3m1.636-6.364l-.707-.707M6.343 4.929l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8z"></path>
         </svg>
         <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707m1.414 1.414l-.707.707M21 12h-1M4 12H3m1.636-6.364l-.707-.707M6.343 4.929l-.707-.707M12 21v-1m4.364-1.636l-.707-.707M16.657 19.071l-.707-.707M21 12h-1m-9 0a4 4 0 100-8 4 4 0 000 8z"></path>
@@ -72,6 +73,13 @@
     </nav>
     {% block content %}{% endblock %}
   </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-10 right-10 bg-zinc-700 text-white p-3 rounded-full shadow-lg hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
 
   <!-- Disclaimer Popup -->
   <div id="disclaimerPopup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-30">
