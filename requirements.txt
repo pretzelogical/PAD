@@ -3,3 +3,4 @@ Django==5.0.7
 Requests==2.32.3
 pillow==10.4.0
 django-htmx==1.18.0
+whitenoise==6.7.0
