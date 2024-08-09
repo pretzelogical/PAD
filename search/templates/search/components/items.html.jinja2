@@ -30,7 +30,7 @@
   {% endfor %}
 
   {% for org in search_results.organization %}
-  <li class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md" style="transition: all 0.1s ease-in;">
+  <li class="shadow-xl hover:shadow-2xl hover:-translate-y-2 rounded-md dark:bg-zinc-700" style="transition: all 0.1s ease-in;">
     <a href="/profile/organization/{{ org.id }}" class="flex">
       {% if org.image %}
       <div class="h-full overflow-hidden">
