@@ -87,7 +87,7 @@
     <h4 class="text-xl"><strong>Organizations:</strong></h4>
     {% for org in profile.organizations.all %}
     <a href="/profile/organization/{{ org.id }}" class="shadow-md hover:shadow-2xl hover:-translate-y-2 rounded-md w-full
-        flex items-stretch my-2 dark:bg-zinc-700 h-10" style="transition: all 0.1s ease-in;">
+        flex items-stretch my-2 dark:bg-zinc-800 h-10" style="transition: all 0.1s ease-in;">
       {% if org.image %}
       <img src="{{ org.image.url }}" alt="Profile picture for {{ org.name }}" class="object-cover w-12 rounded-l-md">
       {% else %}
@@ -105,7 +105,7 @@
     <h4 class="text-xl"><strong>Members:</strong></h4>
     {% for member in profile.members.all %}
     <a href="/profile/politician/{{ member.id }}" class="shadow-md hover:shadow-2xl hover:-translate-y-2 rounded-md w-full
-        flex items-stretch my-2 dark:bg-zinc-700" style="transition: all 0.1s ease-in;">
+        flex items-stretch my-2 dark:bg-zinc-800" style="transition: all 0.1s ease-in;">
       {% if member.image %}
       <img src="{{ member.image.url }}" alt="Profile picture for {{ member.name }}"
         class="object-cover w-12 rounded-l-md">
