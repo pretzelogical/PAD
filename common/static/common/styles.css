@@ -739,6 +739,10 @@ body {
   height: 100vh;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -786,6 +790,10 @@ body {
 
 .items-center {
   align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
 }
 
 .justify-start {
@@ -1092,6 +1100,14 @@ body {
 
 .font-bold {
   font-weight: 700;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .text-blue-500 {
