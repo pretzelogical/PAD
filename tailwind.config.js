@@ -6,6 +6,7 @@ module.exports = {
     // './static/js/**/*.js',
     './**/templates/**/*.html.jinja2',
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f2f2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: .15px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5 {
+        stroke: #3f3f46;
+      }
+
+      .cls-2 {
+        fill: #e6e6e6;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-4" d="M6,11c-2.76,0-5-2.24-5-5S3.24,1,6,1s5,2.24,5,5-2.24,5-5,5Z"/>
+  <polyline class="cls-5" points="6.87 4.84 7.37 4.84 9.49 6.15 2.51 6.15 4.63 4.84 5.13 4.84"/>
+  <rect class="cls-5" x="2.44" y="6.29" width="7.13" height="2.62"/>
+  <polygon class="cls-3" points="7.02 5.56 4.84 5.56 5.13 5.42 6.73 5.42 7.02 5.56"/>
+  <path class="cls-2" d="M6.18,3.15c0,.08.09.16.22.19l.47.19v1.6h-1.75v-2.62h1.75v.5l-.19-.05s-.1-.02-.15-.02c-.19,0-.35.08-.35.2Z"/>
+  <path class="cls-1" d="M7.75,3.87v.38c0,.15-.15.25-.29.21l-.59-.19v-.73l-.47-.19c-.14-.03-.22-.11-.22-.19,0-.12.17-.2.35-.2.05,0,.1,0,.15.02l.19.05.25.07.33.16c.29.15.29.26.29.63Z"/>
+  <path class="cls-2" d="M8.1,3.27l.6-.9.5.58-.2.44-.86.97c-.13.03-.24-.13-.22-.31l-.03-.36c-.03-.18.09-.34.21-.4Z"/>
+</svg>
